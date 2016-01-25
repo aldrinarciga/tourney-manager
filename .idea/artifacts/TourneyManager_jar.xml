@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TourneyManager:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TourneyManager_jar</output-path>
+    <root id="archive" name="TourneyManager.jar">
+      <element id="module-output" name="TourneyManager" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/gson-2.2.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

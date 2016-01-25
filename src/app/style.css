@@ -1,0 +1,14 @@
+.italic.table-cell {
+    -fx-font-size: 20px;
+    -fx-text-fill: red;
+}
+
+.bold.table-cell {
+    -fx-font-size: 20px;
+    -fx-text-fill: black;
+}
+
+.list-cell
+{
+  -fx-font-size: 20px;
+}

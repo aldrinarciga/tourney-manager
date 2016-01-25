@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.WelcomePageController">
+    <left>
+        <VBox prefHeight="400.0" prefWidth="240.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS" />
+                <Button fx:id="btnClassified" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#createNewClassifiedDoubles" prefHeight="25.0" prefWidth="287.0" text="Classified Doubles" VBox.vgrow="ALWAYS">
+                    <font>
+                        <Font name="Garamond" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnDoubles" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#createNewDoubles" prefHeight="25.0" prefWidth="289.0" text="Doubles" textAlignment="CENTER">
+                    <font>
+                        <Font name="Garamond" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saved Tourneys:">
+                    <font>
+                        <Font name="Garamond" size="29.0" />
+                    </font>
+                </Text>
+                <ListView fx:id="listMatches" prefHeight="471.0" prefWidth="510.0" VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
