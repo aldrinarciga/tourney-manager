@@ -98,7 +98,7 @@
                   </Button>
                </children>
             </HBox>
-            <Text stroke="#545454" strokeType="OUTSIDE" strokeWidth="0.0" text="Pampanga Darters Association © 2016" textAlignment="RIGHT" wrappingWidth="749.13671875">
+            <Text stroke="#545454" strokeType="OUTSIDE" strokeWidth="0.0" text="Pampanga Darters Association © 2016" textAlignment="CENTER" wrappingWidth="749.13671875">
                <font>
                   <Font size="14.0" />
                </font>

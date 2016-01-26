@@ -57,7 +57,7 @@ public class YesNoDialog {
         box.getChildren().addAll(txtContent, hbox);
         box.setAlignment(Pos.CENTER);
 
-        double width = 300;
+        double width = 350;
         double height = 110;
 
         Scene scene = new Scene(box, width, height);

@@ -49,7 +49,7 @@
         </VBox>
     </center>
    <bottom>
-      <Text stroke="#545454" strokeType="OUTSIDE" strokeWidth="0.0" text="Pampanga Darters Association © 2016" textAlignment="RIGHT" wrappingWidth="749.13671875" BorderPane.alignment="CENTER">
+      <Text stroke="#545454" strokeType="OUTSIDE" strokeWidth="0.0" text="Pampanga Darters Association © 2016" textAlignment="CENTER" wrappingWidth="749.13671875" BorderPane.alignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>

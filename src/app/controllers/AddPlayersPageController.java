@@ -108,39 +108,37 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
     }
 
     public void startDraw(ActionEvent actionEvent) throws Exception {
-        currentMatch = MatchListMgr.getCurrentMatch();
-        boolean cont = false;
-        switch (currentMatch.getMatchType()){
-            case DOUBLES:
-            case CLASSIFIED_DOUBLES:
-                if(currentMatch.getPlayers().size() % 2 == 1 || currentMatch.getPlayers().size() < 4){
-                    txtStatus.setText("Players not even");
-                }else{
+        if(YesNoDialog.display("Do you want to draw this match?")) {
+            currentMatch = MatchListMgr.getCurrentMatch();
+            boolean cont = false;
+            switch (currentMatch.getMatchType()) {
+                case DOUBLES:
+                case CLASSIFIED_DOUBLES:
+                    if (currentMatch.getPlayers().size() % 2 == 1 || currentMatch.getPlayers().size() < 4) {
+                        txtStatus.setText("Players not even");
+                    } else {
+                        cont = true;
+                    }
+                    break;
+                case SINGLES:
                     cont = true;
-                }
-                break;
-            case SINGLES:
-                cont = true;
-                break;
-            default:
-                break;
-        }
+                    break;
+                default:
+                    break;
+            }
 
-        if(cont){
-            mainInterface.showDrawScene();
+            if (cont) {
+                mainInterface.showDrawScene();
+            }
         }
-
     }
 
     private void savePlayers() {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                MatchListMgr.getCurrentMatch().setPlayers(players);
-                MatchListMgr.saveCurrentMatch();
-            }
+        Thread thread = new Thread(() -> {
+            MatchListMgr.getCurrentMatch().setPlayers(players);
+            MatchListMgr.saveCurrentMatch();
         });
-        thread.run();
+        thread.start();
     }
 
     private void resetTable(){
