@@ -5,4 +5,5 @@ package app.models;
  */
 public interface MainInterface {
     void showAddPlayersScene() throws Exception;
+    void showDrawScene() throws Exception;
 }

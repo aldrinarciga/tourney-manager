@@ -1,6 +1,7 @@
 package app.controllers;
 
 import app.MatchMakerDialog;
+import app.YesNoDialog;
 import app.models.*;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -13,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
+import javafx.scene.text.Text;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -22,6 +25,7 @@ public class WelcomePageController implements Initializable, ControllerInterface
     public Button btnClassified;
     public Button btnDoubles;
     public ListView listMatches;
+    public Text txtStatus;
 
     private MainInterface mainInterface;
 
@@ -43,20 +47,24 @@ public class WelcomePageController implements Initializable, ControllerInterface
 
     public void loadTourney(Event event) {
         String title = listMatches.getSelectionModel().getSelectedItem().toString();
-        String fileName = OtherUtils.getJsonFileName(title);
-        try {
-            String result = OtherUtils.readFile(fileName);
-            Match match =  (new Gson()).fromJson(result, new TypeToken<Match>() {}.getType());
-            MatchListMgr.setCurrentMatch(match);
-            switch (match.getStatus()){
-                case CREATED:
-                    mainInterface.showAddPlayersScene();
-                    break;
-                default:
-                    break;
+        if(YesNoDialog.display("Do you want to load " + title + "?")) {
+            String fileName = OtherUtils.getJsonFileName(title);
+            try {
+                String result = OtherUtils.readFile(fileName);
+                Match match = (new Gson()).fromJson(result, new TypeToken<Match>() {
+                }.getType());
+                MatchListMgr.setCurrentMatch(match);
+                switch (match.getStatus()) {
+                    case CREATED:
+                        mainInterface.showAddPlayersScene();
+                        break;
+                    default:
+                        break;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                txtStatus.setText("Tournament file not found");
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
 
     }

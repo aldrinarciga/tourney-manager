@@ -8,44 +8,6 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.AddPlayersPageController">
-   <bottom>
-      <HBox prefHeight="50.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <children>
-            <TextField fx:id="txtFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name" HBox.hgrow="ALWAYS">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="5.0" top="8.0" />
-               </HBox.margin>
-            </TextField>
-            <TextField fx:id="txtLastName" prefWidth="250.0" promptText="Last Name" HBox.hgrow="ALWAYS">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="5.0" top="8.0" />
-               </HBox.margin>
-            </TextField>
-            <CheckBox fx:id="chRated" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Rated" HBox.hgrow="ALWAYS">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="5.0" top="10.0" />
-               </HBox.margin>
-            </CheckBox>
-            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addPlayer" prefHeight="35.0" prefWidth="118.0" text="Add Player" HBox.hgrow="ALWAYS">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets left="5.0" right="5.0" top="8.0" />
-               </HBox.margin>
-            </Button>
-         </children>
-      </HBox>
-   </bottom>
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -76,7 +38,7 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Text>
-            <TableView fx:id="tblRatedPlayers" prefHeight="300.0" prefWidth="200.0" />
+            <TableView fx:id="tblRatedPlayers" onMouseClicked="#deleteFromRated" prefHeight="300.0" prefWidth="200.0" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Non-Rated Players:">
                <font>
                   <Font size="18.0" />
@@ -85,8 +47,63 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Text>
-            <TableView fx:id="tblNonRatedPlayers" prefHeight="300.0" prefWidth="200.0" />
+            <TableView fx:id="tblNonRatedPlayers" onMouseClicked="#deleteFromNonRated" prefHeight="300.0" prefWidth="200.0" />
+            <Text fx:id="txtStatus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Text>
          </children>
       </VBox>
    </center>
+   <bottom>
+      <VBox prefHeight="64.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="txtFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="8.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtLastName" prefWidth="250.0" promptText="Last Name" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="8.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <CheckBox fx:id="chRated" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Rated" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </CheckBox>
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addPlayer" prefHeight="35.0" prefWidth="118.0" text="Add Player" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Text stroke="#545454" strokeType="OUTSIDE" strokeWidth="0.0" text="Pampanga Darters Association © 2016" textAlignment="RIGHT" wrappingWidth="749.13671875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </bottom>
 </BorderPane>

@@ -1,9 +1,11 @@
 package app.controllers;
 
+import app.YesNoDialog;
 import app.models.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.CheckBoxTableCell;
@@ -28,6 +30,7 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
 
     public TableView tblRatedPlayers;
     public TableView tblNonRatedPlayers;
+    public Text txtStatus;
 
     private MainInterface mainInterface;
 
@@ -93,15 +96,51 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
         txtFirstName.setText("");
         txtLastName.setText("");
         chRated.setSelected(false);
+        txtStatus.setText("");
     }
 
-    public void startDraw(ActionEvent actionEvent) {
+    public void deleteFromRated(Event event) {
+        removePlayer(true);
+    }
+
+    public void deleteFromNonRated(Event event) {
+        removePlayer(false);
+    }
+
+    public void startDraw(ActionEvent actionEvent) throws Exception {
+        currentMatch = MatchListMgr.getCurrentMatch();
+        boolean cont = false;
+        switch (currentMatch.getMatchType()){
+            case DOUBLES:
+            case CLASSIFIED_DOUBLES:
+                if(currentMatch.getPlayers().size() % 2 == 1 || currentMatch.getPlayers().size() < 4){
+                    txtStatus.setText("Players not even");
+                }else{
+                    cont = true;
+                }
+                break;
+            case SINGLES:
+                cont = true;
+                break;
+            default:
+                break;
+        }
+
+        if(cont){
+            mainInterface.showDrawScene();
+        }
 
     }
 
     private void savePlayers() {
-        MatchListMgr.getCurrentMatch().setPlayers(players);
-        MatchListMgr.saveCurrentMatch();
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                MatchListMgr.getCurrentMatch().setPlayers(players);
+                MatchListMgr.saveCurrentMatch();
+            }
+        });
+        thread.run();
     }
 
     private void resetTable(){
@@ -109,14 +148,23 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
         tblNonRatedPlayers.setItems(getPlayersList(false));
     }
 
+    private void removePlayer(boolean isRated){
+        Player player = isRated ? (Player) tblRatedPlayers.getSelectionModel().getSelectedItem() :
+                (Player) tblNonRatedPlayers.getSelectionModel().getSelectedItem();
+        if(YesNoDialog.display("Do you want to delete " + player.getFirstName() + " " + player.getLastName() + "?")) {
+            players.remove(player);
+            resetTable();
+            savePlayers();
+        }
+    }
 
     public ObservableList<Player> getPlayersList(boolean isRated){
-        System.out.println(isRated);
+        //System.out.println(isRated);
         ObservableList<Player> observableList = FXCollections.observableArrayList();
         for(Player player : players){
             if(player.isRated() == isRated) {
                 observableList.add(player);
-                System.out.println("Added:" + player.getFirstName());
+                //System.out.println("Added:" + player.getFirstName());
             }
         }
         return observableList;
@@ -126,4 +174,6 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
     public void setInterface(MainInterface mainInterface) {
         this.mainInterface = mainInterface;
     }
+
+
 }
