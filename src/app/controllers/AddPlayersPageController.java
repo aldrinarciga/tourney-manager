@@ -1,9 +1,6 @@
 package app.controllers;
 
-import app.models.MainInterface;
-import app.models.Match;
-import app.models.MatchListMgr;
-import app.models.Player;
+import app.models.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,7 +18,7 @@ import java.util.ResourceBundle;
 /**
  * Created by samsung on 1/25/2016.
  */
-public class AddPlayersPageController implements Initializable{
+public class AddPlayersPageController implements Initializable, ControllerInterface{
     public Text txtTitle;
     public TextField txtFirstName;
     public TextField txtLastName;
@@ -40,8 +37,12 @@ public class AddPlayersPageController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        currentMatch = MatchListMgr.getCurrentMatch();
         players = new ArrayList<>();
+
+        currentMatch = MatchListMgr.getCurrentMatch();
+        if(currentMatch.getPlayers() != null){
+            players = currentMatch.getPlayers();
+        }
 
         setupTable();
     }
@@ -77,11 +78,6 @@ public class AddPlayersPageController implements Initializable{
         resetTable();
     }
 
-    private void resetTable(){
-        tblRatedPlayers.setItems(getPlayersList(true));
-        tblNonRatedPlayers.setItems(getPlayersList(false));
-    }
-
     public void addPlayer(ActionEvent actionEvent) {
         String firstName = txtFirstName.getText();
         String lastName = txtLastName.getText();
@@ -89,6 +85,8 @@ public class AddPlayersPageController implements Initializable{
 
         Player player = new Player(firstName, lastName, isRated);
         players.add(player);
+
+        savePlayers();
 
         resetTable();
 
@@ -100,6 +98,17 @@ public class AddPlayersPageController implements Initializable{
     public void startDraw(ActionEvent actionEvent) {
 
     }
+
+    private void savePlayers() {
+        MatchListMgr.getCurrentMatch().setPlayers(players);
+        MatchListMgr.saveCurrentMatch();
+    }
+
+    private void resetTable(){
+        tblRatedPlayers.setItems(getPlayersList(true));
+        tblNonRatedPlayers.setItems(getPlayersList(false));
+    }
+
 
     public ObservableList<Player> getPlayersList(boolean isRated){
         System.out.println(isRated);
@@ -113,9 +122,8 @@ public class AddPlayersPageController implements Initializable{
         return observableList;
     }
 
-    public void setMainInterface(MainInterface mainInterface) {
+    @Override
+    public void setInterface(MainInterface mainInterface) {
         this.mainInterface = mainInterface;
     }
-
-
 }

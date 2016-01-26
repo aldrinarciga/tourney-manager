@@ -15,7 +15,7 @@ public class OtherUtils {
     }
 
     public static String readFile(String filename) throws Exception {
-        String result = "";
+        String result;
         BufferedReader br = new BufferedReader(new FileReader(filename));
         StringBuilder sb = new StringBuilder();
         String line = br.readLine();
@@ -25,6 +25,10 @@ public class OtherUtils {
         }
         result = sb.toString();
         return result;
+    }
+
+    public static String getJsonFileName(String title){
+        return title.toLowerCase().replaceAll(" ","-").concat(".json");
     }
 
 }

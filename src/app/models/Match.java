@@ -18,14 +18,16 @@ public class Match {
     private String fileName;
     private MatchType matchType;
     private Status status;
+    private boolean doubleElimination;
     private ArrayList<Team> teams;
     private ArrayList<Player> players;
 
-    public Match(String title, String fileName, MatchType matchType, Status status) {
+    public Match(String title, String fileName, MatchType matchType, Status status, boolean doubleElimination) {
         this.title = title;
         this.fileName = fileName;
         this.matchType = matchType;
         this.status = status;
+        this.doubleElimination = doubleElimination;
     }
 
     public String getTitle() {
@@ -74,5 +76,13 @@ public class Match {
 
     public void setPlayers(ArrayList<Player> players) {
         this.players = players;
+    }
+
+    public boolean isDoubleElimination() {
+        return doubleElimination;
+    }
+
+    public void setDoubleElimination(boolean doubleElimination) {
+        this.doubleElimination = doubleElimination;
     }
 }

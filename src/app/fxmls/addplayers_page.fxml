@@ -11,7 +11,7 @@
    <bottom>
       <HBox prefHeight="50.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="txtFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name">
+            <TextField fx:id="txtFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="14.0" />
                </font>
@@ -19,7 +19,7 @@
                   <Insets left="5.0" top="8.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="txtLastName" prefWidth="250.0" promptText="Last Name">
+            <TextField fx:id="txtLastName" prefWidth="250.0" promptText="Last Name" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="14.0" />
                </font>
@@ -27,7 +27,7 @@
                   <Insets left="5.0" top="8.0" />
                </HBox.margin>
             </TextField>
-            <CheckBox fx:id="chRated" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Rated">
+            <CheckBox fx:id="chRated" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Rated" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="14.0" />
                </font>
@@ -35,7 +35,7 @@
                   <Insets left="5.0" top="10.0" />
                </HBox.margin>
             </CheckBox>
-            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addPlayer" prefHeight="35.0" prefWidth="118.0" text="Add Player">
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addPlayer" prefHeight="35.0" prefWidth="118.0" text="Add Player" HBox.hgrow="ALWAYS">
                <padding>
                   <Insets left="5.0" />
                </padding>

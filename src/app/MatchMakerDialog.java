@@ -1,11 +1,13 @@
 package app;
 
 import app.models.Match;
+import app.models.OtherUtils;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -19,6 +21,7 @@ public class MatchMakerDialog {
     static Match newMatch;
     static TextField titleField;
     static Button btnProceed;
+    static CheckBox chIsDoubleElimination;
     static Match.MatchType type;
     static Stage stage;
 
@@ -42,13 +45,18 @@ public class MatchMakerDialog {
         btnProceed.setOnAction(createMatch);
         btnProceed.setFont(new Font(16));
 
+        chIsDoubleElimination = new CheckBox();
+        chIsDoubleElimination.setText("Double Elimination");
+        chIsDoubleElimination.setFont(new Font(16));
+
         VBox box = new VBox();
         box.setSpacing(10);
-        box.getChildren().addAll(titleField, btnProceed);
+        box.getChildren().addAll(titleField, chIsDoubleElimination, btnProceed);
         box.setAlignment(Pos.CENTER);
-        Scene scene = new Scene(box, 400, 100);
+        Scene scene = new Scene(box, 400, 130);
 
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.showAndWait();
 
         return newMatch;
@@ -58,9 +66,9 @@ public class MatchMakerDialog {
         @Override
         public void handle(ActionEvent event) {
             String title = titleField.getText();
-            String fileName = title.toLowerCase().replaceAll(" ", "-").concat(".json");
+            String fileName = OtherUtils.getJsonFileName(title);
 
-            newMatch = new Match(title, fileName, type, Match.Status.CREATED);
+            newMatch = new Match(title, fileName, type, Match.Status.CREATED, chIsDoubleElimination.isSelected());
             stage.close();
         }
     };
