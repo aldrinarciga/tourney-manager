@@ -89,13 +89,20 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
         Player player = new Player(firstName, lastName, isRated);
         players.add(player);
 
+        if(isRated){
+            tblRatedPlayers.getItems().add(player);
+        }else{
+            tblNonRatedPlayers.getItems().add(player);
+        }
+
         savePlayers();
 
-        resetTable();
+        //resetTable();
 
         txtFirstName.setText("");
         txtLastName.setText("");
         chRated.setSelected(false);
+        txtFirstName.requestFocus();
         txtStatus.setText("");
     }
 
@@ -134,16 +141,25 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
     }
 
     private void savePlayers() {
-        Thread thread = new Thread(() -> {
-            MatchListMgr.getCurrentMatch().setPlayers(players);
-            MatchListMgr.saveCurrentMatch();
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                MatchListMgr.getCurrentMatch().setPlayers(players);
+                MatchListMgr.saveCurrentMatch();
+            }
         });
         thread.start();
     }
 
     private void resetTable(){
-        tblRatedPlayers.setItems(getPlayersList(true));
-        tblNonRatedPlayers.setItems(getPlayersList(false));
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                tblRatedPlayers.setItems(getPlayersList(true));
+                tblNonRatedPlayers.setItems(getPlayersList(false));
+            }
+        });
+        thread.start();
     }
 
     private void removePlayer(boolean isRated){
@@ -151,7 +167,13 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
                 (Player) tblNonRatedPlayers.getSelectionModel().getSelectedItem();
         if(YesNoDialog.display("Do you want to delete " + player.getFirstName() + " " + player.getLastName() + "?")) {
             players.remove(player);
-            resetTable();
+            /*resetTable();*/
+            if(isRated){
+                tblRatedPlayers.getItems().remove(player);
+            }else{
+                tblNonRatedPlayers.getItems().remove(player);
+            }
+            btnAdd.requestFocus();
             savePlayers();
         }
     }

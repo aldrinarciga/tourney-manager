@@ -1,6 +1,8 @@
 package app;
 
 import app.models.Match;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
@@ -40,12 +42,22 @@ public class YesNoDialog {
         btnYes = new Button();
         btnYes.setText("Yes");
         btnYes.setFont(new Font(16));
-        btnYes.setOnAction(e -> returnResult(true));
+        btnYes.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                returnResult(true);
+            }
+        });
 
         btnNo = new Button();
         btnNo.setText("No");
         btnNo.setFont(new Font(16));
-        btnNo.setOnAction(e -> returnResult(false));
+        btnNo.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                returnResult(false);
+            }
+        });
 
         HBox hbox = new HBox();
         hbox.setSpacing(10);

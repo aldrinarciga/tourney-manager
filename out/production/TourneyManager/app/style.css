@@ -12,3 +12,7 @@
 {
   -fx-font-size: 20px;
 }
+.hbox{
+    -fx-border-color: black;
+    -fx-border-width: 4;
+}

@@ -88,7 +88,7 @@
                         <Insets left="5.0" top="10.0" />
                      </HBox.margin>
                   </CheckBox>
-                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addPlayer" prefHeight="35.0" prefWidth="118.0" text="Add Player" HBox.hgrow="ALWAYS">
+                  <Button fx:id="btnAdd" defaultButton="true" mnemonicParsing="false" onAction="#addPlayer" prefHeight="35.0" prefWidth="118.0" text="Add Player" HBox.hgrow="ALWAYS">
                      <padding>
                         <Insets left="5.0" />
                      </padding>
