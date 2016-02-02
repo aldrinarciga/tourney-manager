@@ -38,7 +38,7 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Text>
-            <TableView fx:id="tblRatedPlayers" onMouseClicked="#deleteFromRated" prefHeight="300.0" prefWidth="200.0" />
+            <TableView fx:id="tblRatedPlayers" onMouseClicked="#deleteFromRated" prefHeight="300.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Non-Rated Players:">
                <font>
                   <Font size="18.0" />
@@ -47,7 +47,7 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Text>
-            <TableView fx:id="tblNonRatedPlayers" onMouseClicked="#deleteFromNonRated" prefHeight="300.0" prefWidth="200.0" />
+            <TableView fx:id="tblNonRatedPlayers" onMouseClicked="#deleteFromNonRated" prefHeight="300.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
             <Text fx:id="txtStatus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0">
                <font>
                   <Font size="14.0" />
@@ -98,7 +98,7 @@
                   </Button>
                </children>
             </HBox>
-            <Text stroke="#545454" strokeType="OUTSIDE" strokeWidth="0.0" text="Pampanga Darters Association © 2016" textAlignment="CENTER" wrappingWidth="749.13671875">
+            <Text stroke="#545454" strokeType="OUTSIDE" strokeWidth="0.0" text="Pampanga Darters Association © 2016" textAlignment="CENTER" wrappingWidth="749.13671875" VBox.vgrow="ALWAYS">
                <font>
                   <Font size="14.0" />
                </font>

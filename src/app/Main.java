@@ -20,7 +20,7 @@ public class Main extends Application implements MainInterface {
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
         resetScene("fxmls/welcome_page.fxml", "Tourney Manager", 750, 500);
-        window.setResizable(false);
+        //window.setResizable(false);
 
         double width = 750;
         double height = 500;

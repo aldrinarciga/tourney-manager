@@ -10,7 +10,10 @@
    <center>
       <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <content>
-            <VBox fx:id="vbxContainer" minHeight="200.0" minWidth="748.0" prefWidth="748.0" spacing="15.0" />
+            <VBox fx:id="vbxContainer" minHeight="200.0" minWidth="748.0" prefWidth="748.0" spacing="15.0">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding></VBox>
          </content>
       </ScrollPane>
    </center>

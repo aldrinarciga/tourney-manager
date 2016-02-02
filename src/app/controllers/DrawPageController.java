@@ -37,7 +37,13 @@ public class DrawPageController implements Initializable, ControllerInterface {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         currentMatch = MatchListMgr.getCurrentMatch();
-        createTeams();
+        //if(currentMatch.getTeams() == null) {
+            createTeams();
+        /*}else{
+            drawnTeams = currentMatch.getTeams();
+            numOfTeams = drawnTeams.size();
+            displayTeams();
+        }*/
     }
 
     @Override
@@ -105,7 +111,8 @@ public class DrawPageController implements Initializable, ControllerInterface {
                     drawnTeams.add(team);
                 }
             }else if(ratedPlayers.size() > nonRatedPlayers.size()){
-                for(int i = 1; i <= numOfTeams; i++){
+                int i = 1;
+                while (drawnTeams.size() !=  numOfTeams){
                     ArrayList<Player> players = new ArrayList<>();
                     players.add(ratedPlayers.get(i-1));
                     if(i > nonRatedPlayers.size()){
@@ -116,9 +123,12 @@ public class DrawPageController implements Initializable, ControllerInterface {
                     }
                     Team team = new Team(i, players);
                     drawnTeams.add(team);
+                    i++;
                 }
+                
             }else{
-                for(int i = 1; i <= numOfTeams; i++){
+                int i = 1;
+                while (drawnTeams.size() !=  numOfTeams){
                     ArrayList<Player> players = new ArrayList<>();
                     players.add(nonRatedPlayers.get(i-1));
                     if(i > ratedPlayers.size()){
@@ -129,6 +139,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
                     }
                     Team team = new Team(i, players);
                     drawnTeams.add(team);
+                    i++;
                 }
             }
         }else{
@@ -144,11 +155,17 @@ public class DrawPageController implements Initializable, ControllerInterface {
             }
         }
 
+        MatchListMgr.getCurrentMatch().setTeams(drawnTeams);
+        MatchListMgr.getCurrentMatch().setStatus(Match.Status.DRAWN);
+        MatchListMgr.saveCurrentMatch();
+
         displayTeams();
     }
 
     private void displayTeams() {
         int x = 1;
+        System.out.println(numOfTeams);
+        System.out.println(drawnTeams.size());
         HBox containers[] = new HBox[numOfTeams];
         for(Team team : drawnTeams){
             //System.out.println("Team " + (x++) + " : ");
