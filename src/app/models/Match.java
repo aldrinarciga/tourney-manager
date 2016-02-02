@@ -6,12 +6,12 @@ import java.util.ArrayList;
  * Created by samsung on 1/25/2016.
  */
 public class Match {
-    public static enum MatchType{
-        CLASSIFIED_DOUBLES, DOUBLES, SINGLES;
+    public enum MatchType{
+        CLASSIFIED_DOUBLES, OPEN_DOUBLES, SINGLES
     }
 
-    public static enum Status {
-        CREATED, DRAWN, STARTED, ENDED;
+    public enum Status {
+        CREATED, DRAWN, STARTED, ENDED
     }
 
     private String title;

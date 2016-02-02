@@ -8,10 +8,8 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
-import javafx.util.Callback;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -119,16 +117,20 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
             currentMatch = MatchListMgr.getCurrentMatch();
             boolean cont = false;
             switch (currentMatch.getMatchType()) {
-                case DOUBLES:
+                case OPEN_DOUBLES:
                 case CLASSIFIED_DOUBLES:
-                    if (currentMatch.getPlayers().size() % 2 == 1 || currentMatch.getPlayers().size() < 4) {
-                        txtStatus.setText("Players not even");
+                    if (currentMatch.getPlayers() == null || currentMatch.getPlayers().size() % 2 == 1 || currentMatch.getPlayers().size() < 4) {
+                        txtStatus.setText("Insufficient Players/Players not even");
                     } else {
                         cont = true;
                     }
                     break;
                 case SINGLES:
-                    cont = true;
+                    if (currentMatch.getPlayers() == null || currentMatch.getPlayers().size() < 2) {
+                        txtStatus.setText("Insufficient Players/Players not even");
+                    } else {
+                        cont = true;
+                    }
                     break;
                 default:
                     break;

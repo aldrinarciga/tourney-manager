@@ -26,6 +26,7 @@ public class WelcomePageController implements Initializable, ControllerInterface
     public Button btnDoubles;
     public ListView listMatches;
     public Text txtStatus;
+    public Button btnSingles;
 
     private MainInterface mainInterface;
 
@@ -42,7 +43,11 @@ public class WelcomePageController implements Initializable, ControllerInterface
     }
 
     public void createNewDoubles(ActionEvent actionEvent) {
+        createNewMatch(Match.MatchType.OPEN_DOUBLES);
+    }
 
+    public void createNewSingles(ActionEvent actionEvent) {
+        createNewMatch(Match.MatchType.SINGLES);
     }
 
     public void loadTourney(Event event) {
@@ -99,6 +104,7 @@ public class WelcomePageController implements Initializable, ControllerInterface
     public void setInterface(MainInterface mainInterface) {
         this.mainInterface = mainInterface;
     }
+
 
 
 }

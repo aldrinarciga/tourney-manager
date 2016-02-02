@@ -1,12 +1,10 @@
 package app.controllers;
 
-import app.Main;
 import app.models.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -17,7 +15,6 @@ import javafx.scene.text.TextAlignment;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 import java.util.ResourceBundle;
 
 /**
@@ -71,7 +68,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
 
         switch (currentMatch.getMatchType()){
             case CLASSIFIED_DOUBLES:
-            case DOUBLES:
+            case OPEN_DOUBLES:
                 numOfPlayers = 2;
                 numOfTeams /= 2;
                 drawForDoubles();
