@@ -64,7 +64,7 @@ public class WelcomePageController implements Initializable, ControllerInterface
                         mainInterface.showAddPlayersScene();
                         break;
                     case DRAWN:
-                        mainInterface.showAddPlayersScene();
+                        mainInterface.showDrawScene();
                         break;
                     default:
                         break;

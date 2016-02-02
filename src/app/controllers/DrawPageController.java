@@ -37,13 +37,13 @@ public class DrawPageController implements Initializable, ControllerInterface {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         currentMatch = MatchListMgr.getCurrentMatch();
-        //if(currentMatch.getTeams() == null) {
+        if(currentMatch.getTeams() == null) {
             createTeams();
-        /*}else{
+        }else{
             drawnTeams = currentMatch.getTeams();
             numOfTeams = drawnTeams.size();
             displayTeams();
-        }*/
+        }
     }
 
     @Override
@@ -125,7 +125,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
                     drawnTeams.add(team);
                     i++;
                 }
-                
+
             }else{
                 int i = 1;
                 while (drawnTeams.size() !=  numOfTeams){
