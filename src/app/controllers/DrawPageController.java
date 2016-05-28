@@ -42,6 +42,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
         }else{
             drawnTeams = currentMatch.getTeams();
             numOfTeams = drawnTeams.size();
+
             displayTeams();
         }
     }
@@ -169,7 +170,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
         HBox containers[] = new HBox[numOfTeams];
         for(Team team : drawnTeams){
             //System.out.println("Team " + (x++) + " : ");
-
+            //System.out.println("Team : " + team.getPlayers().get(0).getFirstName() + " & " + team.getPlayers().get(1).getFirstName());
             HBox innerContainer = new HBox(15);
             innerContainer.setPrefWidth(vbxContainer.getWidth() / 2);
             innerContainer.setAlignment(Pos.CENTER_LEFT);
@@ -180,6 +181,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
             txtTeamNumber.setFont(new Font(50));
 
             HBox playerContainer = new HBox(15);
+            playerContainer.setFillHeight(true);
             for(int i = 1 ; i <= team.getPlayers().size(); i++){
                 Player player = team.getPlayers().get(i-1);
                 //System.out.println(player.getFirstName() + " " + player.getLastName());
@@ -205,12 +207,14 @@ public class DrawPageController implements Initializable, ControllerInterface {
 
             innerContainer.getChildren().addAll(txtTeamNumber, playerContainer);
             innerContainer.getStyleClass().add("hbox");
-
-            containers[x-1] = innerContainer;
+            int c = x - 1;
+            containers[c] = innerContainer;
             x++;
         }
 
         vbxContainer.getChildren().addAll(containers);
+
+        System.out.println(vbxContainer.getChildren().size());
 
     }
 
