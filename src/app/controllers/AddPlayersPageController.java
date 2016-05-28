@@ -198,4 +198,11 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
     }
 
 
+    public void generate(ActionEvent actionEvent) {
+        for(int x = 1; x <= 80; x++){
+            txtFirstName.setText(x + "");
+            chRated.setSelected(x <= 20);
+            addPlayer(null);
+        }
+    }
 }

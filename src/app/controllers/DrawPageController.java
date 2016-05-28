@@ -2,9 +2,11 @@ package app.controllers;
 
 import app.models.*;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -24,6 +26,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
 
     public VBox vbxContainer;
     public Button btnStartMatch;
+    public TextArea txtSearch;
     private MainInterface mainInterface;
 
     private Match currentMatch;
@@ -112,7 +115,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
                     drawnTeams.add(team);
                 }
             }else if(ratedPlayers.size() > nonRatedPlayers.size()){
-                int i = 1;
+                int i = 1, teamNum = 1;
                 while (drawnTeams.size() !=  numOfTeams){
                     ArrayList<Player> players = new ArrayList<>();
                     players.add(ratedPlayers.get(i-1));
@@ -122,13 +125,13 @@ public class DrawPageController implements Initializable, ControllerInterface {
                     }else {
                         players.add(nonRatedPlayers.get(i - 1));
                     }
-                    Team team = new Team(i, players);
+                    Team team = new Team(teamNum++, players);
                     drawnTeams.add(team);
                     i++;
                 }
 
             }else{
-                int i = 1;
+                int i = 1, teamNum = 1;
                 while (drawnTeams.size() !=  numOfTeams){
                     ArrayList<Player> players = new ArrayList<>();
                     players.add(nonRatedPlayers.get(i-1));
@@ -138,7 +141,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
                     }else {
                         players.add(ratedPlayers.get(i - 1));
                     }
-                    Team team = new Team(i, players);
+                    Team team = new Team(teamNum++, players);
                     drawnTeams.add(team);
                     i++;
                 }
@@ -165,8 +168,6 @@ public class DrawPageController implements Initializable, ControllerInterface {
 
     private void displayTeams() {
         int x = 1;
-        System.out.println(numOfTeams);
-        System.out.println(drawnTeams.size());
         HBox containers[] = new HBox[numOfTeams];
         for(Team team : drawnTeams){
             //System.out.println("Team " + (x++) + " : ");
@@ -177,7 +178,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
             //innerContainer.setMinWidth(vbxContainer.getWidth() / 2);
 
             Text txtTeamNumber = new Text();
-            txtTeamNumber.setText("" + x);
+            txtTeamNumber.setText("" + team.getTeamNumber());
             txtTeamNumber.setFont(new Font(50));
 
             HBox playerContainer = new HBox(15);
@@ -211,11 +212,84 @@ public class DrawPageController implements Initializable, ControllerInterface {
             containers[c] = innerContainer;
             x++;
         }
-
+        vbxContainer.getChildren().clear();
         vbxContainer.getChildren().addAll(containers);
 
-        System.out.println(vbxContainer.getChildren().size());
 
     }
 
+    private void displayTeamsWithQuery(String query) {
+        int x = 1;
+        query = query.toLowerCase();
+        ArrayList<Team> queriedTeam = new ArrayList<>();
+        for(Team team : drawnTeams){
+            boolean hasPlayer = false;
+            for(Player player : team.getPlayers()){
+                if(player.getFirstName().toLowerCase().contains(query) || player.getLastName().toLowerCase().contains(query)){
+                    hasPlayer = true;
+                    break;
+                }
+            }
+            if(hasPlayer){
+                queriedTeam.add(team);
+            }
+        }
+        HBox containers[] = new HBox[queriedTeam.size()];
+        for(Team team : queriedTeam){
+            //System.out.println("Team " + (x++) + " : ");
+            //System.out.println("Team : " + team.getPlayers().get(0).getFirstName() + " & " + team.getPlayers().get(1).getFirstName());
+            HBox innerContainer = new HBox(15);
+            innerContainer.setPrefWidth(vbxContainer.getWidth() / 2);
+            innerContainer.setAlignment(Pos.CENTER_LEFT);
+            //innerContainer.setMinWidth(vbxContainer.getWidth() / 2);
+
+            Text txtTeamNumber = new Text();
+            txtTeamNumber.setText(team.getTeamNumber() + "");
+            txtTeamNumber.setFont(new Font(50));
+
+            HBox playerContainer = new HBox(15);
+            playerContainer.setFillHeight(true);
+            for(int i = 1 ; i <= team.getPlayers().size(); i++){
+                Player player = team.getPlayers().get(i-1);
+                //System.out.println(player.getFirstName() + " " + player.getLastName());
+                Text txtPlayer = new Text();
+                txtPlayer.setText(player.getFirstName() + " " + player.getLastName());
+                txtPlayer.setFill(player.isRated() ? Color.RED : Color.BLACK);
+                txtPlayer.setFont(new Font(30));
+                txtPlayer.setTextAlignment(TextAlignment.CENTER);
+
+                Text txtAmp = new Text();
+                txtAmp.setText("&");
+                txtAmp.setFill(Color.BLUE);
+                txtAmp.setFont(new Font(30));
+                txtAmp.setTextAlignment(TextAlignment.CENTER);
+
+                playerContainer.getChildren().add(txtPlayer);
+                if(i < team.getPlayers().size()) {
+                    playerContainer.getChildren().add(txtAmp);
+                }
+            }
+
+            playerContainer.setAlignment(Pos.CENTER);
+
+            innerContainer.getChildren().addAll(txtTeamNumber, playerContainer);
+            innerContainer.getStyleClass().add("hbox");
+            int c = x - 1;
+            containers[c] = innerContainer;
+            x++;
+        }
+        vbxContainer.getChildren().clear();
+        if(containers.length > 0) {
+            vbxContainer.getChildren().addAll(containers);
+        }
+
+
+    }
+
+    public void search(Event event) {
+        displayTeamsWithQuery(txtSearch.getText());
+        if(txtSearch.getText().equals("")){
+            displayTeams();
+        }
+    }
 }

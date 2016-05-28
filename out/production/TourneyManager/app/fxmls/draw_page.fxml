@@ -17,13 +17,6 @@
          </content>
       </ScrollPane>
    </center>
-   <top>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Team Draw" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="38.0" />
-         </font>
-      </Text>
-   </top>
    <bottom>
       <VBox prefHeight="49.0" prefWidth="750.0" BorderPane.alignment="CENTER">
          <children>
@@ -43,4 +36,16 @@
          </children>
       </VBox>
    </bottom>
+   <top>
+      <VBox prefHeight="75.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Team Draw">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="txtSearch" onKeyTyped="#search" prefHeight="200.0" prefWidth="200.0" promptText="Search" />
+         </children>
+      </VBox>
+   </top>
 </BorderPane>
