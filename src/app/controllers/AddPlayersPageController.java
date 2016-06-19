@@ -146,6 +146,7 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
+                txtTitle.setText("Players : " + (tblRatedPlayers.getItems().size() + tblNonRatedPlayers.getItems().size()));
                 MatchListMgr.getCurrentMatch().setPlayers(players);
                 MatchListMgr.saveCurrentMatch();
             }
@@ -199,9 +200,9 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
 
 
     public void generate(ActionEvent actionEvent) {
-        for(int x = 1; x <= 100; x++){
+        for(int x = 1; x <= 120; x++){
             txtFirstName.setText("asd" + x + "");
-            chRated.setSelected(x < 10);
+            chRated.setSelected(x <= 15);
             addPlayer(null);
         }
     }
