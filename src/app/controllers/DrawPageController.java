@@ -159,6 +159,13 @@ public class DrawPageController implements Initializable, ControllerInterface {
             }
         }
 
+        Collections.shuffle(drawnTeams);
+        for(int x = 1; x <= drawnTeams.size(); x++){
+            Team team = drawnTeams.get(x - 1);
+            team.setTeamNumber(x);
+            drawnTeams.set((x - 1), team);
+        }
+
         MatchListMgr.getCurrentMatch().setTeams(drawnTeams);
         MatchListMgr.getCurrentMatch().setStatus(Match.Status.DRAWN);
         MatchListMgr.saveCurrentMatch();

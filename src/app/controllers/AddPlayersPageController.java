@@ -199,9 +199,9 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
 
 
     public void generate(ActionEvent actionEvent) {
-        for(int x = 1; x <= 80; x++){
-            txtFirstName.setText(x + "");
-            chRated.setSelected(x <= 20);
+        for(int x = 1; x <= 100; x++){
+            txtFirstName.setText("asd" + x + "");
+            chRated.setSelected(x < 10);
             addPlayer(null);
         }
     }
