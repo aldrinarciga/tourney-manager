@@ -197,7 +197,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
                 //System.out.println(player.getFirstName() + " " + player.getLastName());
                 Text txtPlayer = new Text();
                 txtPlayer.setText(player.getFirstName() + " " + player.getLastName());
-                txtPlayer.setFill(player.isRated() ? Color.RED : Color.BLACK);
+                txtPlayer.setFill(player.isRated() ? Color.BLACK : Color.BLACK);
                 txtPlayer.setFont(new Font(30));
                 txtPlayer.setTextAlignment(TextAlignment.CENTER);
 

@@ -160,6 +160,7 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
             public void run() {
                 tblRatedPlayers.setItems(getPlayersList(true));
                 tblNonRatedPlayers.setItems(getPlayersList(false));
+                txtTitle.setText("Players : " + (tblRatedPlayers.getItems().size() + tblNonRatedPlayers.getItems().size()));
             }
         });
         thread.start();
