@@ -7,9 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/ManageTourneyPageController$1.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/ManageTourneyPageController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/ManageTourneyPageController.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/ManageTourneyPageController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matches.json" afterPath="$PROJECT_DIR$/matches.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/fxmls/manage_tourney_page.fxml" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/fxmls/manage_tourney_page.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/robinsons-ftahers-day.json" afterPath="$PROJECT_DIR$/robinsons-ftahers-day.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/BoardDetailsDialog.java" afterPath="$PROJECT_DIR$/src/app/BoardDetailsDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/BoardMakerDialog.java" afterPath="$PROJECT_DIR$/src/app/BoardMakerDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/BoardNumberDialog.java" afterPath="$PROJECT_DIR$/src/app/BoardNumberDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java" afterPath="$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/fxmls/manage_tourney_page.fxml" afterPath="$PROJECT_DIR$/src/app/fxmls/manage_tourney_page.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/models/ErrorDialog.java" afterPath="$PROJECT_DIR$/src/app/ErrorDialog.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,15 +77,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ManageTourneyPageController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ManageTourneyPageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="122" column="17" lean-forward="false" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
+            <state relative-caret-position="269">
+              <caret line="211" column="63" lean-forward="true" selection-start-line="211" selection-start-column="63" selection-end-line="211" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5529#5530#0" expanded="true" />
+                <element signature="e#5556#5557#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchMatchDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/SearchMatchDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="67" column="30" lean-forward="false" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage_tourney_page.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/fxmls/manage_tourney_page.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="23" column="113" lean-forward="true" selection-start-line="23" selection-start-column="113" selection-end-line="23" selection-end-column="113" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
@@ -84,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/src/app/BoardDetailsDialog.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
-              <caret line="93" column="63" lean-forward="false" selection-start-line="93" selection-start-column="63" selection-end-line="93" selection-end-column="63" />
+              <caret line="91" column="63" lean-forward="false" selection-start-line="91" selection-start-column="63" selection-end-line="91" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -94,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/src/app/BoardMakerDialog.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+              <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -103,22 +137,19 @@
       <file leaf-file-name="BoardNumberDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/BoardNumberDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="74" column="31" lean-forward="true" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+            <state relative-caret-position="337">
+              <caret line="69" column="31" lean-forward="true" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErrorDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/models/ErrorDialog.java">
+      <file leaf-file-name="SearchResultDialog.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/models/SearchResultDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-241">
-              <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding>
-                <element signature="e#1604#1605#0" expanded="true" />
-                <element signature="e#1633#1634#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="45" column="25" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -141,6 +172,8 @@
       <find>clearReadyFunctions</find>
       <find>getBoardById</find>
       <find>btnPrint</find>
+      <find>resetBoard</find>
+      <find>setId</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -181,13 +214,16 @@
         <option value="$PROJECT_DIR$/src/app/fxmls/manage_tourney_page.fxml" />
         <option value="$PROJECT_DIR$/src/app/Main.java" />
         <option value="$PROJECT_DIR$/src/app/controllers/DrawPageController.java" />
-        <option value="$PROJECT_DIR$/src/app/models/Board.java" />
         <option value="$PROJECT_DIR$/src/app/models/Match.java" />
         <option value="$PROJECT_DIR$/src/app/models/ErrorDialog.java" />
         <option value="$PROJECT_DIR$/src/app/BoardNumberDialog.java" />
         <option value="$PROJECT_DIR$/src/app/BoardMakerDialog.java" />
         <option value="$PROJECT_DIR$/src/app/BoardDetailsDialog.java" />
+        <option value="$PROJECT_DIR$/src/app/models/Board.java" />
+        <option value="$PROJECT_DIR$/src/app/SearchMatchDialog.java" />
+        <option value="$PROJECT_DIR$/src/app/ErrorDialog.java" />
         <option value="$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java" />
+        <option value="$PROJECT_DIR$/src/app/models/SearchResultDialog.java" />
       </list>
     </option>
   </component>
@@ -266,6 +302,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tourney-manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tourney-manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -295,8 +353,8 @@
       <recent name="D:\Git\TourneyManager" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="app" />
       <recent name="app.models" />
+      <recent name="app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Git\TourneyManager\src\app\scene-fxml" />
@@ -562,7 +620,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38589212" sideWeight="0.478145" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38589212" sideWeight="0.478145" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38589212" sideWeight="0.521855" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -606,21 +664,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/MatchMakerDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="69" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -923,19 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="48" column="65" lean-forward="false" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
-          <folding>
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#1035#1036#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/models/Match.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -961,17 +991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/fxmls/manage_tourney_page.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/YesNoDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-207">
@@ -983,29 +1002,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/ErrorDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/app/BoardDetailsDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-241">
-          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="201">
+          <caret line="91" column="63" lean-forward="false" selection-start-line="91" selection-start-column="63" selection-end-line="91" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/fxmls/manage_tourney_page.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="23" column="113" lean-forward="true" selection-start-line="23" selection-start-column="113" selection-end-line="23" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/SearchMatchDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="67" column="30" lean-forward="false" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ErrorDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
-            <element signature="e#1604#1605#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1597#1598#0" expanded="true" />
+            <element signature="e#1626#1627#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/BoardNumberDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="74" column="31" lean-forward="true" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/BoardDetailsDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="93" column="63" lean-forward="false" selection-start-line="93" selection-start-column="63" selection-end-line="93" selection-end-column="63" />
+        <state relative-caret-position="337">
+          <caret line="69" column="31" lean-forward="true" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1013,18 +1059,28 @@
     <entry file="file://$PROJECT_DIR$/src/app/BoardMakerDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="122" column="17" lean-forward="false" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
+        <state relative-caret-position="269">
+          <caret line="211" column="63" lean-forward="true" selection-start-line="211" selection-start-column="63" selection-end-line="211" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5529#5530#0" expanded="true" />
+            <element signature="e#5556#5557#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/SearchResultDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="45" column="25" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

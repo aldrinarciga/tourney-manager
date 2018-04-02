@@ -16,32 +16,32 @@ import javafx.stage.Stage;
 /**
  * Created by samsung on 1/25/2016.
  */
-public class BoardNumberDialog {
-    static TextField boardNumberField;
+public class SearchMatchDialog {
+    static TextField txtQuery;
     static Button btnProceed;
     static Stage stage;
-    static int numberOfBoards = 0;
+    static String searchQuery;
 
-    public static int display(){
+    public static String display(){
 
         stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Enter number of boards");
+        stage.setTitle("Search Active Match");
 
-        boardNumberField = new TextField();
-        boardNumberField.setPromptText("Number of boards");
-        boardNumberField.setFocusTraversable(false);
-        boardNumberField.setPrefSize(200,10);
-        boardNumberField.setFont(new Font(16));
+        txtQuery = new TextField();
+        txtQuery.setPromptText("Enter name, match or board number");
+        txtQuery.setFocusTraversable(false);
+        txtQuery.setPrefSize(200,10);
+        txtQuery.setFont(new Font(16));
 
         btnProceed = new Button();
-        btnProceed.setText("Proceed");
+        btnProceed.setText("Search");
         btnProceed.setOnAction(createMatch);
         btnProceed.setFont(new Font(16));
 
         VBox box = new VBox();
         box.setSpacing(10);
-        box.getChildren().addAll(boardNumberField, btnProceed);
+        box.getChildren().addAll(txtQuery, btnProceed);
         box.setAlignment(Pos.CENTER);
         Scene scene = new Scene(box, 400, 130);
 
@@ -57,14 +57,14 @@ public class BoardNumberDialog {
 
         stage.showAndWait();
 
-        return numberOfBoards;
+        return searchQuery;
     }
 
     static EventHandler<ActionEvent> createMatch = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
             try {
-                numberOfBoards = Integer.parseInt(boardNumberField.getText());
+                searchQuery = txtQuery.getText();
                 stage.close();
             } catch (Exception ex) {
                 ErrorDialog.display("Please make sure that the details are correct");

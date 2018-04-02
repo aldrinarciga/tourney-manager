@@ -1,26 +1,18 @@
 package app.controllers;
 
-import app.BoardDetailsDialog;
-import app.BoardMakerDialog;
-import app.YesNoDialog;
+import app.*;
 import app.models.*;
 import com.belteshazzar.jquery.JQuery;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Worker;
-import javafx.event.EventHandler;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebEvent;
 import javafx.scene.web.WebView;
 
 import java.net.URL;
-import java.util.HashMap;
-import java.util.ResourceBundle;
-import java.util.TreeMap;
+import java.util.*;
 
 import static com.belteshazzar.jquery.JQuery.$;
 
@@ -110,6 +102,7 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
             updateBtn(board, btn);
 
             boardsMap.put(boardId, board);
+            saveMatch();
         }
 
     }
@@ -134,6 +127,7 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
         board.setPlayerOne(0);
         board.setMatchNumber(0);
         updateBtn(board, btn);
+        saveMatch();
     }
 
     private void loadWebView() {
@@ -169,4 +163,62 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
         this.mainInterface = mainInterface;
     }
 
+    public void saveMatch(ActionEvent actionEvent) {
+        saveMatch();
+    }
+
+    public void saveMatch() {
+        MatchListMgr.setCurrentMatch(currentMatch);
+        MatchListMgr.saveCurrentMatch();
+    }
+
+    public void searchMatch(ActionEvent actionEvent) {
+        String query = SearchMatchDialog.display().toLowerCase();
+        List<Board> results = new ArrayList<>();
+        if( !query.isEmpty()) {
+            int num = 0;
+            try {
+                num = Integer.parseInt(query);
+            } catch (Exception ex) {
+                num = 0;
+            } finally {
+                for(Board board : boardsMap.values()) {
+                    if(board.hasCurrentMatch()) {
+                        boolean isAdded = false;
+                        if(num > 0) {
+                            if(board.getMatchNumber() == num || board.getBoardNumber() == num) {
+                                isAdded = true;
+                                results.add(board);
+                            }
+                        }
+
+                        if(!isAdded && (playersMap.get(board.getPlayerOne()).toLowerCase().contains(query) || playersMap.get(board.getPlayerTwo()).toLowerCase().contains(query))) {
+                            results.add(board);
+                        }
+                    }
+                }
+            }
+        }
+
+        if(!results.isEmpty()) {
+            if(results.size() > 1) {
+                StringBuilder builder = new StringBuilder("Multiple results: \n");
+                for(Board board : results) {
+                    builder.append("- B" + board.getBoardNumber() + "/M" + board.getMatchNumber() + ": ");
+                    builder.append(playersMap.get(board.getPlayerOne()) + " vs. " + playersMap.get(board.getPlayerTwo()));
+                    builder.append("\n");
+                }
+
+                SearchResultDialog.display(builder.toString());
+            } else {
+                showBoardDetails(boardsMap.get(results.get(0).getBoardNumber()), (Button) boardContainer.getChildren().get(results.get(0).getBoardNumber() - 1));
+            }
+        } else {
+            ErrorDialog.display("No active match found");
+        }
+    }
+
+    public void printMultiple(ActionEvent actionEvent) {
+
+    }
 }

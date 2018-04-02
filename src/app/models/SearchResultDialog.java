@@ -1,12 +1,10 @@
 package app.models;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -17,7 +15,7 @@ import javafx.stage.Stage;
 /**
  * Created by samsung on 1/26/2016.
  */
-public class ErrorDialog {
+public class SearchResultDialog {
     static Text txtContent;
     static Button btnOk;
     static Stage stage;
@@ -40,11 +38,12 @@ public class ErrorDialog {
 
         VBox box = new VBox();
         box.setSpacing(10);
+        box.setPadding(new Insets(10, 10, 10 ,10));
         box.getChildren().addAll(txtContent, btnOk);
         box.setAlignment(Pos.CENTER);
 
-        double width = 350;
-        double height = 110;
+        double width = 600;
+        double height = 400;
 
         Scene scene = new Scene(box, width, height);
 
