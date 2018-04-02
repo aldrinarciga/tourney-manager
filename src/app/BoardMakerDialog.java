@@ -87,11 +87,22 @@ public class BoardMakerDialog {
         public void handle(ActionEvent event) {
             try {
                 int matchNumber = Integer.parseInt(txtMatchNumber.getText());
-                int player1 = Integer.parseInt(txtMatchNumber.getText());
-                int player2 = Integer.parseInt(txtMatchNumber.getText());
+                int player1 = Integer.parseInt(txtPlayerOne.getText());
+                int player2 = Integer.parseInt(txtPlayerTwo.getText());
                 board.setMatchNumber(matchNumber);
                 board.setPlayerOne(player1);
                 board.setPlayerTwo(player2);
+
+                if(player1 == player2) {
+                    ErrorDialog.display("Players can't be the same");
+                    return;
+                }
+
+                if(matchNumber < 1) {
+                    ErrorDialog.display("Match number should be greater than 0");
+                    return;
+                }
+
                 stage.close();
             } catch (Exception ex) {
                 ErrorDialog.display("Please make sure that the details are correct");

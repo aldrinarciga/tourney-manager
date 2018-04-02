@@ -1,6 +1,8 @@
 package app.controllers;
 
+import app.BoardDetailsDialog;
 import app.BoardMakerDialog;
+import app.YesNoDialog;
 import app.models.*;
 import com.belteshazzar.jquery.JQuery;
 import javafx.beans.value.ChangeListener;
@@ -92,13 +94,14 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
         Board board = boardsMap.get(boardId);
         if(board != null) {
             if(board.hasCurrentMatch()) {
-                resetBoard(board);
+                showBoardDetails(board, btn);
             } else {
                 Board newBoard = BoardMakerDialog.display(boardId);
                 if(newBoard != null && newBoard.getMatchNumber() > 0 &&playersMap.get(newBoard.getPlayerOne()) != null && playersMap.get(newBoard.getPlayerTwo()) != null) {
                     board.setMatchNumber(newBoard.getMatchNumber());
                     board.setPlayerOne(newBoard.getPlayerOne());
                     board.setPlayerTwo(newBoard.getPlayerTwo());
+                    showBoardDetails(board, btn);
                 } else {
                     ErrorDialog.display("Match or player seed number doesn't exist");
                 }
@@ -111,10 +114,26 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
 
     }
 
-    private void resetBoard(Board board) {
+    private void showBoardDetails(Board board, Button btn) {
+        BoardDetailsDialog.BoardResult result = BoardDetailsDialog.display(board, playersMap.get(board.getPlayerOne()), playersMap.get(board.getPlayerTwo()));
+        switch (result.boardAction) {
+            case CLOSE:
+                if(YesNoDialog.display("Are you sure you want to finish this match?")) {
+                    resetBoard(board, btn);
+                }
+                break;
+            case PRINT:
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void resetBoard(Board board, Button btn) {
         board.setPlayerTwo(0);
         board.setPlayerOne(0);
         board.setMatchNumber(0);
+        updateBtn(board, btn);
     }
 
     private void loadWebView() {
