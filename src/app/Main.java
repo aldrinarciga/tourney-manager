@@ -45,7 +45,12 @@ public class Main extends Application implements MainInterface {
 
     @Override
     public void showDrawScene() throws Exception{
-        resetScene(window, "fxmls/draw_page.fxml", MatchListMgr.getCurrentMatch().getTitle(), 750, 900);
+        resetScene(window, "fxmls/draw_page.fxml", MatchListMgr.getCurrentMatch().getTitle(), 750, 700);
+    }
+
+    @Override
+    public void showManageTourneyScene() throws Exception {
+        resetScene(new Stage(), "fxmls/manage_tourney_page.fxml", MatchListMgr.getCurrentMatch().getTitle(), 800, 600);
     }
 
     private void resetScene(Stage window, String resource, String title, double width, double height)throws Exception{

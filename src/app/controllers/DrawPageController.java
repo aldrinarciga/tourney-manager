@@ -1,5 +1,6 @@
 package app.controllers;
 
+import app.BoardNumberDialog;
 import app.YesNoDialog;
 import app.models.*;
 import javafx.event.ActionEvent;
@@ -362,7 +363,26 @@ public class DrawPageController implements Initializable, ControllerInterface {
 
     }
 
-    public void manageTourney(ActionEvent actionEvent) {
+    public void manageTourney(ActionEvent actionEvent) throws Exception {
+        if(currentMatch.getNumberOfBoards() < 1) {
+            int numBoards = BoardNumberDialog.display();
+            if(numBoards > 0) {
+                createBoards(numBoards);
+                mainInterface.showManageTourneyScene();
+            }
+        } else {
+            mainInterface.showManageTourneyScene();
+        }
+    }
 
+    private void createBoards(int numBoards) {
+        ArrayList<Board> boards = new ArrayList<>();
+        for(int x = 1 ; x <= numBoards; x++) {
+            Board board = new Board(x);
+            boards.add(board);
+        }
+        currentMatch.setBoards(boards);
+        MatchListMgr.getCurrentMatch().setBoards(boards);
+        MatchListMgr.saveCurrentMatch();
     }
 }

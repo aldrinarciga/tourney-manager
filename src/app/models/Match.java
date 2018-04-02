@@ -21,6 +21,7 @@ public class Match {
     private boolean doubleElimination;
     private ArrayList<Team> teams;
     private ArrayList<Player> players;
+    private ArrayList<Board> boards;
 
     public Match(String title, String fileName, MatchType matchType, Status status, boolean doubleElimination) {
         this.title = title;
@@ -84,5 +85,17 @@ public class Match {
 
     public void setDoubleElimination(boolean doubleElimination) {
         this.doubleElimination = doubleElimination;
+    }
+
+    public int getNumberOfBoards() {
+        return boards != null ? boards.size() : 0;
+    }
+
+    public ArrayList<Board> getBoards() {
+        return boards;
+    }
+
+    public void setBoards(ArrayList<Board> boards) {
+        this.boards = boards;
     }
 }
