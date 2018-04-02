@@ -117,12 +117,16 @@ public class DrawPageController implements Initializable, ControllerInterface {
 
     private void drawForSingles() {
         ArrayList<Player> curPlayers = currentMatch.getPlayers();
+        for(int x = 0; x < 10; x++) {
+            Collections.shuffle(curPlayers);
+        }
         for(int i = 1; i <= numOfTeams; i++){
             ArrayList<Player> players = new ArrayList<>();
             players.add(curPlayers.get(i-1));
             Team team = new Team(i, players);
             drawnTeams.add(team);
         }
+        saveDrawnTeams();
         displayTeams();
     }
 
@@ -190,11 +194,15 @@ public class DrawPageController implements Initializable, ControllerInterface {
             drawnTeams.set((x - 1), team);
         }
 
+        saveDrawnTeams();
+
+        displayTeams();
+    }
+
+    private void saveDrawnTeams() {
         MatchListMgr.getCurrentMatch().setTeams(drawnTeams);
         MatchListMgr.getCurrentMatch().setStatus(Match.Status.DRAWN);
         MatchListMgr.saveCurrentMatch();
-
-        displayTeams();
     }
 
     private void displayTeams() {
@@ -332,7 +340,8 @@ public class DrawPageController implements Initializable, ControllerInterface {
 
     public void showCopyPlayers(ActionEvent actionEvent) {
         StringBuilder builder = new StringBuilder("");
-        for(Team team : currentMatch.getTeams()) {
+        for(int i = 0 ; i < currentMatch.getTeams().size(); i++) {
+            Team team = currentMatch.getTeams().get(i);
             for(int x = 0; x < team.getPlayers().size(); x++) {
                 Player player = team.getPlayers().get(x);
                 builder.append(player.getFirstName() + " " + player.getLastName());
@@ -340,7 +349,9 @@ public class DrawPageController implements Initializable, ControllerInterface {
                     builder.append(" / ");
                 }
             }
-            builder.append("\n");
+            if(i != currentMatch.getTeams().size() - 1) {
+                builder.append("\n");
+            }
         }
         Toolkit.getDefaultToolkit()
                 .getSystemClipboard()
