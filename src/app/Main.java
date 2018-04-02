@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 public class Main extends Application implements MainInterface {
 
@@ -19,7 +20,7 @@ public class Main extends Application implements MainInterface {
     @Override
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
-        resetScene("fxmls/welcome_page.fxml", "Tourney Manager", 750, 500);
+        resetScene(window, "fxmls/welcome_page.fxml", "Tourney Manager", 750, 500);
         //window.setResizable(false);
 
         double width = 750;
@@ -39,15 +40,15 @@ public class Main extends Application implements MainInterface {
 
     @Override
     public void showAddPlayersScene() throws Exception{
-        resetScene("fxmls/addplayers_page.fxml", MatchListMgr.getCurrentMatch().getTitle(), 750, 700);
+        resetScene(window, "fxmls/addplayers_page.fxml", MatchListMgr.getCurrentMatch().getTitle(), 750, 700);
     }
 
     @Override
     public void showDrawScene() throws Exception{
-        resetScene("fxmls/draw_page.fxml", MatchListMgr.getCurrentMatch().getTitle(), 750, 900);
+        resetScene(window, "fxmls/draw_page.fxml", MatchListMgr.getCurrentMatch().getTitle(), 750, 900);
     }
 
-    private void resetScene(String resource, String title, double width, double height)throws Exception{
+    private void resetScene(Stage window, String resource, String title, double width, double height)throws Exception{
         FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
         Parent root = loader.load();
 
@@ -64,5 +65,9 @@ public class Main extends Application implements MainInterface {
         Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
         window.setX((screenBounds.getWidth() - window.getWidth()) / 2);
         window.setY((screenBounds.getHeight() - window.getHeight()) / 2);
+
+        if(!window.isShowing()) {
+            window.show();
+        }
     }
 }

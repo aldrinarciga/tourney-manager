@@ -1,5 +1,6 @@
 package app.controllers;
 
+import app.YesNoDialog;
 import app.models.*;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -14,6 +15,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,6 +30,9 @@ public class DrawPageController implements Initializable, ControllerInterface {
     public VBox vbxContainer;
     public Button btnStartMatch;
     public TextArea txtSearch;
+    public Button btnRedraw;
+    public Button btnCopyPlayers;
+    public Button btnManage;
     private MainInterface mainInterface;
 
     private Match currentMatch;
@@ -48,6 +54,8 @@ public class DrawPageController implements Initializable, ControllerInterface {
 
             displayTeams();
         }
+
+        updateButtonsBasedOnStatus();
     }
 
     @Override
@@ -56,7 +64,21 @@ public class DrawPageController implements Initializable, ControllerInterface {
     }
 
     public void startMatch(ActionEvent actionEvent) {
+        if(YesNoDialog.display("You cannot redraw after starting, are you sure?")) {
+            currentMatch.setStatus(Match.Status.STARTED);
+            MatchListMgr.getCurrentMatch().setStatus(Match.Status.STARTED);
+            MatchListMgr.saveCurrentMatch();
 
+            updateButtonsBasedOnStatus();
+        }
+    }
+
+    private void updateButtonsBasedOnStatus() {
+        boolean isStarted = currentMatch.getStatus() == Match.Status.STARTED;
+        btnRedraw.setVisible(!isStarted);
+        btnStartMatch.setVisible(!isStarted);
+        btnCopyPlayers.setVisible(isStarted);
+        btnManage.setVisible(isStarted);
     }
 
     private void createTeams(){
@@ -300,5 +322,36 @@ public class DrawPageController implements Initializable, ControllerInterface {
         if(txtSearch.getText().equals("")){
             displayTeams();
         }
+    }
+
+    public void redrawPlayers(ActionEvent actionEvent) {
+        if(YesNoDialog.display("Would you like to redraw pairings/seeds?")) {
+            createTeams();
+        }
+    }
+
+    public void showCopyPlayers(ActionEvent actionEvent) {
+        StringBuilder builder = new StringBuilder("");
+        for(Team team : currentMatch.getTeams()) {
+            for(int x = 0; x < team.getPlayers().size(); x++) {
+                Player player = team.getPlayers().get(x);
+                builder.append(player.getFirstName() + " " + player.getLastName());
+                if(x != team.getPlayers().size() - 1) {
+                    builder.append(" / ");
+                }
+            }
+            builder.append("\n");
+        }
+        Toolkit.getDefaultToolkit()
+                .getSystemClipboard()
+                .setContents(
+                        new StringSelection(builder.toString()),
+                        null
+                );
+
+    }
+
+    public void manageTourney(ActionEvent actionEvent) {
+
     }
 }
