@@ -1,10 +1,7 @@
 package app.controllers;
 
 import app.*;
-import app.dialogs.BoardDetailsDialog;
-import app.dialogs.BoardMakerDialog;
-import app.dialogs.ErrorDialog;
-import app.dialogs.SearchMatchDialog;
+import app.dialogs.*;
 import app.models.*;
 import com.belteshazzar.jquery.JQuery;
 import javafx.concurrent.Worker;
@@ -34,6 +31,7 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
     private Match currentMatch;
     private HashMap<Integer, String> playersMap;
     private TreeMap<Integer, Board> boardsMap;
+    private PrintReport printReport;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -100,8 +98,6 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
                     board.setPlayerOne(newBoard.getPlayerOne());
                     board.setPlayerTwo(newBoard.getPlayerTwo());
                     showBoardDetails(board, btn);
-                } else {
-                    ErrorDialog.display("Match or player seed number doesn't exist");
                 }
             }
 
@@ -136,14 +132,19 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
     }
 
     private void printBoards(List<Board> boards) {
-        try {
-            (new PrintReport()).showReport(boards, playersMap);
-        } catch (JRException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if(boards.isEmpty()) {
+            return;
+        }
+        (new Thread(() -> {
+            try {
+                (new PrintReport()).showReport(boards, playersMap);
+            } catch (JRException | ClassNotFoundException | SQLException e) {
+                e.printStackTrace();
+            }
+        })).start();
+
+        for (Board board : boards) {
+            board.setPrinted(true);
         }
     }
 
@@ -151,6 +152,7 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
         board.setPlayerTwo(0);
         board.setPlayerOne(0);
         board.setMatchNumber(0);
+        board.setPrinted(false);
         updateBtn(board, btn);
         saveMatch();
     }
@@ -194,7 +196,7 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
 
     public void saveMatch() {
         MatchListMgr.setCurrentMatch(currentMatch);
-        MatchListMgr.saveCurrentMatch();
+        mainInterface.saveMatchOnNewThread();
     }
 
     public void searchMatch(ActionEvent actionEvent) {
@@ -244,6 +246,53 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
     }
 
     public void printMultiple(ActionEvent actionEvent) {
+        List<Board> activeBoards = getActiveBoards();
+        if(activeBoards.size() > 0) {
+            boolean showPrinted = YesNoDialog.display("Do you want to include already printed matches?");
+            if(!showPrinted) {
+                activeBoards = getUnprintedBoards();
+            }
+            if(activeBoards.size() > 0) {
+                List<Integer> boardIds = PrintSelectionDialog.display(activeBoards);
+                printBoards(getBoardsByIds(boardIds));
+            } else {
+                ErrorDialog.display("No active matches to print");
+            }
 
+        } else {
+            ErrorDialog.display("No active matches to print");
+        }
+
+    }
+
+    private List<Board> getBoardsByIds(List<Integer> boardIds) {
+        List<Board> boards = new ArrayList<>();
+        for(int id : boardIds) {
+            Board board = boardsMap.get(id);
+            if(board != null) {
+                boards.add(board);
+            }
+        }
+        return boards;
+    }
+
+    private List<Board> getActiveBoards() {
+        List<Board> boards = new ArrayList<>();
+        for(Board board : boardsMap.values()) {
+            if(board.hasCurrentMatch()) {
+                boards.add(board);
+            }
+        }
+        return boards;
+    }
+
+    private List<Board> getUnprintedBoards() {
+        List<Board> boards = new ArrayList<>();
+        for(Board board : boardsMap.values()) {
+            if(!board.isPrinted() && board.hasCurrentMatch()) {
+                boards.add(board);
+            }
+        }
+        return boards;
     }
 }

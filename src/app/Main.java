@@ -75,4 +75,9 @@ public class Main extends Application implements MainInterface {
             window.show();
         }
     }
+
+    @Override
+    public void saveMatchOnNewThread() {
+        (new Thread(MatchListMgr::saveCurrentMatch)).start();
+    }
 }

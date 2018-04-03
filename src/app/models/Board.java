@@ -8,6 +8,7 @@ public class Board {
     private int matchNumber;
     private int playerOne;
     private int playerTwo;
+    private boolean isPrinted;
 
     public Board(int boardNumber) {
         this.boardNumber = boardNumber;
@@ -47,5 +48,13 @@ public class Board {
 
     public boolean hasCurrentMatch() {
         return matchNumber > 0 && playerOne > 0 && playerTwo > 0;
+    }
+
+    public boolean isPrinted() {
+        return isPrinted;
+    }
+
+    public void setPrinted(boolean printed) {
+        isPrinted = printed;
     }
 }

@@ -7,42 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/BoardDetailsDialog$BoardAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/BoardDetailsDialog$BoardResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/BoardDetailsDialog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/BoardMakerDialog$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/BoardMakerDialog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/BoardNumberDialog$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/BoardNumberDialog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/BulkAddDialog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/ErrorDialog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/MatchMakerDialog$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/MatchMakerDialog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/SearchMatchDialog$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/SearchMatchDialog.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/AddPlayersPageController.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/AddPlayersPageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/DrawPageController.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/DrawPageController.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/MatchReport.jrxml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/PrintReport.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/PrintReport.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/ManageTourneyPageController$1.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/ManageTourneyPageController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/ManageTourneyPageController.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/ManageTourneyPageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/WelcomePageController$1.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/WelcomePageController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/WelcomePageController$2.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/WelcomePageController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/WelcomePageController.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/WelcomePageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/models/MatchListMgr$1.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/models/MatchListMgr$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/models/MatchListMgr.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/models/MatchListMgr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/models/Board.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/models/Board.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TourneyManager.iml" afterPath="$PROJECT_DIR$/TourneyManager.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/robinsons-ftahers-day.json" afterPath="$PROJECT_DIR$/robinsons-ftahers-day.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sampe-2.json" afterPath="$PROJECT_DIR$/sampe-2.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample-game!.json" afterPath="$PROJECT_DIR$/sample-game!.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/Main.java" afterPath="$PROJECT_DIR$/src/app/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/PrintReport.java" afterPath="$PROJECT_DIR$/src/app/PrintReport.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java" afterPath="$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/controllers/DrawPageController.java" afterPath="$PROJECT_DIR$/src/app/controllers/DrawPageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java" afterPath="$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/controllers/WelcomePageController.java" afterPath="$PROJECT_DIR$/src/app/controllers/WelcomePageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/models/MatchListMgr.java" afterPath="$PROJECT_DIR$/src/app/models/MatchListMgr.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/BoardDetailsDialog.java" afterPath="$PROJECT_DIR$/src/app/dialogs/BoardDetailsDialog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/BoardMakerDialog.java" afterPath="$PROJECT_DIR$/src/app/dialogs/BoardMakerDialog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/BoardNumberDialog.java" afterPath="$PROJECT_DIR$/src/app/dialogs/BoardNumberDialog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/BulkAddDialog.java" afterPath="$PROJECT_DIR$/src/app/dialogs/BulkAddDialog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/ErrorDialog.java" afterPath="$PROJECT_DIR$/src/app/dialogs/ErrorDialog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/MatchMakerDialog.java" afterPath="$PROJECT_DIR$/src/app/dialogs/MatchMakerDialog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/SearchMatchDialog.java" afterPath="$PROJECT_DIR$/src/app/dialogs/SearchMatchDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/models/Board.java" afterPath="$PROJECT_DIR$/src/app/models/Board.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/models/MainInterface.java" afterPath="$PROJECT_DIR$/src/app/models/MainInterface.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/MatchReport.jrxml" afterPath="$PROJECT_DIR$/src/app/reports/MatchReport.jrxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,41 +86,39 @@
       <file leaf-file-name="ManageTourneyPageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="134" column="26" lean-forward="false" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="26" />
+            <state relative-caret-position="199">
+              <caret line="198" column="45" lean-forward="false" selection-start-line="198" selection-start-column="45" selection-end-line="198" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BulkAddDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/dialogs/BulkAddDialog.java">
+      <file leaf-file-name="MatchListMgr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/models/MatchListMgr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="274">
+              <caret line="59" column="32" lean-forward="true" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchMatchDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/dialogs/SearchMatchDialog.java">
+      <file leaf-file-name="DrawPageController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/controllers/DrawPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="44">
+              <caret line="194" column="42" lean-forward="true" selection-start-line="194" selection-start-column="42" selection-end-line="194" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrintReport.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/PrintReport.java">
+      <file leaf-file-name="AddPlayersPageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,38 +126,33 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="66" column="38" lean-forward="true" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="95" />
-              <folding />
+            <state relative-caret-position="180">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="e#2630#2631#0" expanded="true" />
+                <element signature="e#2698#2699#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErrorDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/dialogs/ErrorDialog.java">
+      <file leaf-file-name="PrintReport.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/PrintReport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="333">
+              <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatchMakerDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/dialogs/MatchMakerDialog.java">
+      <file leaf-file-name="PrintSelectionDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/dialogs/PrintSelectionDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardNumberDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/dialogs/BoardNumberDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="-496">
+              <caret line="71" column="36" lean-forward="false" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -196,7 +171,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>saveCurrentMatch</find>
       <find>savePlayers</find>
       <find>clearReadyFunctions</find>
       <find>getBoardById</find>
@@ -211,6 +185,21 @@
       <find>resetTable</find>
       <find>jasperReport</find>
       <find>JasperD</find>
+      <find>printBo</find>
+      <find>reset</find>
+      <find>max</find>
+      <find>Pr</find>
+      <find>printB</find>
+      <find>Thre</find>
+      <find>Thread</find>
+      <find>Threa</find>
+      <find>saveMa</find>
+      <find>saveCurr</find>
+      <find>saveCurrentMatch</find>
+      <find>remo</find>
+      <find>save</find>
+      <find>saveCUr</find>
+      <find>redraw</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -245,27 +234,29 @@
         <option value="$PROJECT_DIR$/robinsons-ftahers-day.json" />
         <option value="$PROJECT_DIR$/src/app/fxmls/draw_page.fxml" />
         <option value="$PROJECT_DIR$/src/app/controllers/WelcomePageController.java" />
-        <option value="$PROJECT_DIR$/src/app/models/MainInterface.java" />
         <option value="$PROJECT_DIR$/src/app/fxmls/manage_tourney_page.fxml" />
-        <option value="$PROJECT_DIR$/src/app/Main.java" />
         <option value="$PROJECT_DIR$/src/app/models/Match.java" />
         <option value="$PROJECT_DIR$/src/app/models/ErrorDialog.java" />
         <option value="$PROJECT_DIR$/src/app/BoardNumberDialog.java" />
         <option value="$PROJECT_DIR$/src/app/BoardMakerDialog.java" />
         <option value="$PROJECT_DIR$/src/app/BoardDetailsDialog.java" />
-        <option value="$PROJECT_DIR$/src/app/models/Board.java" />
         <option value="$PROJECT_DIR$/src/app/SearchMatchDialog.java" />
         <option value="$PROJECT_DIR$/src/app/ErrorDialog.java" />
         <option value="$PROJECT_DIR$/src/app/models/SearchResultDialog.java" />
         <option value="$PROJECT_DIR$/src/app/models/BulkAddDialog.java" />
         <option value="$PROJECT_DIR$/src/app/BulkAddDialog.java" />
         <option value="$PROJECT_DIR$/src/app/YesNoDialog.java" />
-        <option value="$PROJECT_DIR$/src/app/controllers/DrawPageController.java" />
-        <option value="$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java" />
         <option value="$PROJECT_DIR$/src/app/dialogs/ErrorDialog.java" />
         <option value="$PROJECT_DIR$/src/app/dialogs/SearchMatchDialog.java" />
-        <option value="$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java" />
+        <option value="$PROJECT_DIR$/src/app/models/Board.java" />
+        <option value="$PROJECT_DIR$/src/app/reports/PrintReport.java" />
+        <option value="$PROJECT_DIR$/src/app/dialogs/PrintSelectionDialog.java" />
         <option value="$PROJECT_DIR$/src/app/PrintReport.java" />
+        <option value="$PROJECT_DIR$/src/app/models/MainInterface.java" />
+        <option value="$PROJECT_DIR$/src/app/Main.java" />
+        <option value="$PROJECT_DIR$/src/app/controllers/DrawPageController.java" />
+        <option value="$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java" />
+        <option value="$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java" />
       </list>
     </option>
   </component>
@@ -352,43 +343,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TourneyManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tourney-manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tourney-manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TourneyManager" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -400,7 +365,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -425,24 +398,25 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="Mat&#9;FILE&#9;file://D:/Development/Projects/tourney-manager/src/app/models/Match.java" />
+    <property name="SearchEverywhereHistoryKey" value="Main&#9;FILE&#9;file://D:/Development/Projects/tourney-manager/src/app/Main.java&#10;MatchLis&#9;FILE&#9;file://D:/Development/Projects/tourney-manager/src/app/models/MatchListMgr.java&#10;Mat&#9;FILE&#9;file://D:/Development/Projects/tourney-manager/src/app/models/Match.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Development\Projects\tourney-manager\src\app" />
       <recent name="D:\Development\Projects\tourney-manager\src\app\reports" />
+      <recent name="D:\Development\Projects\tourney-manager\src\app" />
       <recent name="D:\Development\Projects\tourney-manager\libs" />
       <recent name="D:\Git\TourneyManager\src\app\scene-fxml" />
       <recent name="D:\Git\TourneyManager\src\app\scenes" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app.dialogs" />
       <recent name="app.models" />
       <recent name="app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Development\Projects\tourney-manager\libs" />
       <recent name="D:\Development\Projects\tourney-manager\src\app" />
       <recent name="D:\Development\Projects\tourney-manager\src\reports" />
-      <recent name="D:\Development\Projects\tourney-manager\libs" />
       <recent name="D:\Development\Projects\tourney-manager" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -702,13 +676,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38589212" sideWeight="0.4738806" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38589212" sideWeight="0.4717484" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38589212" sideWeight="0.5261194" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38589212" sideWeight="0.5282516" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1913646" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -750,31 +724,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/WelcomePageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/fxmls/welcome_page.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/models/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -802,25 +751,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/OtherUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robinsons-ftahers-day.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="119" lean-forward="true" selection-start-line="0" selection-start-column="119" selection-end-line="0" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/WelcomePageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -837,14 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/MatchListMgr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="55" column="42" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/MainInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="51" lean-forward="false" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/models/Match.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -920,14 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="113" lean-forward="false" selection-start-line="23" selection-start-column="113" selection-end-line="23" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -993,22 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/DrawPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="375" column="20" lean-forward="false" selection-start-line="375" selection-start-column="19" selection-end-line="375" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="209" column="0" lean-forward="true" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/dialogs/BoardDetailsDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1053,14 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="66" column="38" lean-forward="true" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="95" />
           <folding />
         </state>
       </provider>
@@ -1121,23 +1008,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="134" column="26" lean-forward="false" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/dialogs/SearchMatchDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/MatchReport.jrxml">
+    <entry file="file://$PROJECT_DIR$/src/app/reports/MatchReport.jrxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-714">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1145,13 +1016,124 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/dialogs/SearchMatchDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-275">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+          <folding>
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/controlsfx-8.40.14.jar!/org/controlsfx/control/CheckComboBox.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/dialogs/PrintSelectionDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-496">
+          <caret line="71" column="36" lean-forward="false" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/awt/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="1275" column="27" lean-forward="false" selection-start-line="1275" selection-start-column="27" selection-end-line="1275" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/OtherUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/PrintReport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        <state relative-caret-position="333">
+          <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/MatchListMgr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="59" column="32" lean-forward="true" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/WelcomePageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="95" column="48" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/MainInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="198" column="45" lean-forward="false" selection-start-line="198" selection-start-column="45" selection-end-line="198" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#2630#2631#0" expanded="true" />
+            <element signature="e#2698#2699#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/DrawPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="194" column="42" lean-forward="true" selection-start-line="194" selection-start-column="42" selection-end-line="194" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>

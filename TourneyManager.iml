@@ -12,5 +12,6 @@
     <orderEntry type="library" name="gson-2.2.4 (2)" level="project" />
     <orderEntry type="library" name="jasperreports-6.5.1" level="project" />
     <orderEntry type="library" name="ant-1.7.1" level="project" />
+    <orderEntry type="library" name="controlsfx-8.40.14" level="project" />
   </component>
 </module>

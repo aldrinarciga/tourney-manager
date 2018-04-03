@@ -68,7 +68,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
         if(YesNoDialog.display("You cannot redraw after starting, are you sure?")) {
             currentMatch.setStatus(Match.Status.STARTED);
             MatchListMgr.getCurrentMatch().setStatus(Match.Status.STARTED);
-            MatchListMgr.saveCurrentMatch();
+            mainInterface.saveMatchOnNewThread();
 
             updateButtonsBasedOnStatus();
         }
@@ -203,7 +203,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
     private void saveDrawnTeams() {
         MatchListMgr.getCurrentMatch().setTeams(drawnTeams);
         MatchListMgr.getCurrentMatch().setStatus(Match.Status.DRAWN);
-        MatchListMgr.saveCurrentMatch();
+        mainInterface.saveMatchOnNewThread();
     }
 
     private void displayTeams() {
@@ -377,7 +377,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
         }
         currentMatch.setBoards(boards);
         MatchListMgr.getCurrentMatch().setBoards(boards);
-        MatchListMgr.saveCurrentMatch();
+        mainInterface.saveMatchOnNewThread();
     }
 
     private StringBuilder getStringBuilderForTeam() {

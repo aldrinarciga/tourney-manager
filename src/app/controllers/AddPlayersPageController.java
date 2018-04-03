@@ -157,7 +157,7 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
             public void run() {
                 txtTitle.setText("Players : " + (tblRatedPlayers.getItems().size() + tblNonRatedPlayers.getItems().size()));
                 MatchListMgr.getCurrentMatch().setPlayers(players);
-                MatchListMgr.saveCurrentMatch();
+                mainInterface.saveMatchOnNewThread();
             }
         });
         thread.start();
