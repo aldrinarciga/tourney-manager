@@ -367,12 +367,20 @@ public class DrawPageController implements Initializable, ControllerInterface {
 
     public void manageTourney(ActionEvent actionEvent) throws Exception {
         if(currentMatch.getNumberOfBoards() < 1) {
-            int numBoards = BoardNumberDialog.display();
-            if(numBoards > 0) {
-                createBoards(numBoards);
+            showBoardCreationDialog();
+        } else {
+            if(YesNoDialog.display("Do you want to reset boards?")) {
+                showBoardCreationDialog();
+            } else {
                 mainInterface.showManageTourneyScene();
             }
-        } else {
+        }
+    }
+
+    private void showBoardCreationDialog() throws Exception {
+        int numBoards = BoardNumberDialog.display();
+        if(numBoards > 0) {
+            createBoards(numBoards);
             mainInterface.showManageTourneyScene();
         }
     }

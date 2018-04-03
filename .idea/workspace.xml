@@ -7,19 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/TourneyManager_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/TourneyManager_jar/.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/TourneyManager_jar/TourneyManager.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/TourneyManager_jar/matches.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/TourneyManager_jar/robinsons-ftahers-day.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/TourneyManager_jar/robinsons-may-28.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/DrawPageController$1.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/DrawPageController$1.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sampe-2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sample-4.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sample-5.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sample-6.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sample-game!.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sample.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sample3.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sample4.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/DrawPageController.class" afterPath="$PROJECT_DIR$/out/production/TourneyManager/app/controllers/DrawPageController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matches.json" afterPath="$PROJECT_DIR$/matches.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java" afterPath="$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/controllers/DrawPageController.java" afterPath="$PROJECT_DIR$/src/app/controllers/DrawPageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/fxmls/draw_page.fxml" afterPath="$PROJECT_DIR$/src/app/fxmls/draw_page.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,41 +77,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ManageTourneyPageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/controllers/ManageTourneyPageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-177">
-              <caret line="59" column="17" lean-forward="false" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddPlayersPageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-972">
-              <caret line="124" column="67" lean-forward="false" selection-start-line="124" selection-start-column="67" selection-end-line="124" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DrawPageController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DrawPageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/controllers/DrawPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="340" column="83" lean-forward="false" selection-start-line="340" selection-start-column="83" selection-end-line="340" selection-end-column="83" />
+            <state relative-caret-position="369">
+              <caret line="392" column="9" lean-forward="true" selection-start-line="392" selection-start-column="9" selection-end-line="392" selection-end-column="9" />
               <folding>
                 <element signature="e#1867#1868#0" expanded="true" />
                 <element signature="e#1917#1918#0" expanded="true" />
@@ -121,27 +90,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addplayers_page.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/fxmls/addplayers_page.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="matches.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/matches.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="26" column="122" lean-forward="false" selection-start-line="26" selection-start-column="122" selection-end-line="26" selection-end-column="122" />
+            <state relative-caret-position="221">
+              <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="draw_page.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/fxmls/draw_page.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="WelcomePageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/controllers/WelcomePageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168">
-              <caret line="28" column="161" lean-forward="false" selection-start-line="28" selection-start-column="161" selection-end-line="28" selection-end-column="161" />
+            <state relative-caret-position="180">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OtherUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/models/OtherUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -247,6 +220,7 @@
         <option value="$PROJECT_DIR$/src/app/fxmls/draw_page.fxml" />
         <option value="$PROJECT_DIR$/src/app/controllers/AddPlayersPageController.java" />
         <option value="$PROJECT_DIR$/src/app/controllers/DrawPageController.java" />
+        <option value="$PROJECT_DIR$/matches.json" />
       </list>
     </option>
   </component>
@@ -777,13 +751,6 @@
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/util/List.java" />
-    <entry file="file://$PROJECT_DIR$/matches.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robinsons-ftahers-day.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1072,14 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/OtherUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/PrintReport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -1094,14 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="59" column="32" lean-forward="true" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/WelcomePageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="95" column="48" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1168,14 +1119,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/WelcomePageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/OtherUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/controllers/DrawPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="340" column="83" lean-forward="false" selection-start-line="340" selection-start-column="83" selection-end-line="340" selection-end-column="83" />
+        <state relative-caret-position="369">
+          <caret line="392" column="9" lean-forward="true" selection-start-line="392" selection-start-column="9" selection-end-line="392" selection-end-column="9" />
           <folding>
             <element signature="e#1867#1868#0" expanded="true" />
             <element signature="e#1917#1918#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matches.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
