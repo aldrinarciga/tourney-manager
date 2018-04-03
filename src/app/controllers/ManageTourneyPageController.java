@@ -1,6 +1,10 @@
 package app.controllers;
 
 import app.*;
+import app.dialogs.BoardDetailsDialog;
+import app.dialogs.BoardMakerDialog;
+import app.dialogs.ErrorDialog;
+import app.dialogs.SearchMatchDialog;
 import app.models.*;
 import com.belteshazzar.jquery.JQuery;
 import javafx.concurrent.Worker;
@@ -10,8 +14,10 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import net.sf.jasperreports.engine.JRException;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.*;
 
 import static com.belteshazzar.jquery.JQuery.$;
@@ -116,9 +122,28 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
                 }
                 break;
             case PRINT:
+                printBoard(board);
                 break;
             default:
                 break;
+        }
+    }
+
+    private void printBoard(Board board) {
+        ArrayList<Board> boards = new ArrayList<>();
+        boards.add(board);
+        printBoards(boards);
+    }
+
+    private void printBoards(List<Board> boards) {
+        try {
+            (new PrintReport()).showReport(boards, playersMap);
+        } catch (JRException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 

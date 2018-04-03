@@ -1,6 +1,6 @@
 package app.controllers;
 
-import app.BulkAddDialog;
+import app.dialogs.BulkAddDialog;
 import app.YesNoDialog;
 import app.models.*;
 import javafx.collections.FXCollections;

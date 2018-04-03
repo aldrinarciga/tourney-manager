@@ -1,6 +1,6 @@
 package app.controllers;
 
-import app.MatchMakerDialog;
+import app.dialogs.MatchMakerDialog;
 import app.YesNoDialog;
 import app.models.*;
 import com.google.gson.Gson;
@@ -17,7 +17,6 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.text.Text;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class WelcomePageController implements Initializable, ControllerInterface {
