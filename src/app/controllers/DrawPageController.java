@@ -2,6 +2,7 @@ package app.controllers;
 
 import app.dialogs.BoardNumberDialog;
 import app.YesNoDialog;
+import app.dialogs.ErrorDialog;
 import app.models.*;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -47,13 +48,14 @@ public class DrawPageController implements Initializable, ControllerInterface {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         currentMatch = MatchListMgr.getCurrentMatch();
-        if(currentMatch.getTeams() == null) {
-            createTeams();
-        }else{
+        if(currentMatch.getTeams() != null) {
             drawnTeams = currentMatch.getTeams();
             numOfTeams = drawnTeams.size();
 
             displayTeams();
+        } else {
+            ErrorDialog.display("Press draw to randomize teams and seeds.");
+            btnStartMatch.setVisible(false);
         }
 
         updateButtonsBasedOnStatus();
@@ -77,7 +79,7 @@ public class DrawPageController implements Initializable, ControllerInterface {
     private void updateButtonsBasedOnStatus() {
         boolean isStarted = currentMatch.getStatus() == Match.Status.STARTED;
         btnRedraw.setVisible(!isStarted);
-        btnStartMatch.setVisible(!isStarted);
+        btnStartMatch.setVisible(!isStarted && currentMatch.getTeams() != null && currentMatch.getTeams().size() > 0);
         btnCopyPlayers.setVisible(isStarted);
         btnManage.setVisible(isStarted);
     }
@@ -334,9 +336,15 @@ public class DrawPageController implements Initializable, ControllerInterface {
     }
 
     public void redrawPlayers(ActionEvent actionEvent) {
-        if(YesNoDialog.display("Would you like to redraw pairings/seeds?")) {
-            createTeams();
+        boolean cont = true;
+        if(currentMatch.getTeams() != null && !currentMatch.getTeams().isEmpty()) {
+            cont = YesNoDialog.display("Would you like to redraw pairings/seeds?");
         }
+        if(cont) {
+            createTeams();
+            updateButtonsBasedOnStatus();
+        }
+
     }
 
     public void showCopyPlayers(ActionEvent actionEvent) {

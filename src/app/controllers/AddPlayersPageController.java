@@ -122,7 +122,7 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
     }
 
     public void startDraw(ActionEvent actionEvent) throws Exception {
-        if(YesNoDialog.display("Do you want to draw this match?")) {
+        if(YesNoDialog.display("Do you want to proceed to draw page?")) {
             currentMatch = MatchListMgr.getCurrentMatch();
             boolean cont = false;
             switch (currentMatch.getMatchType()) {
