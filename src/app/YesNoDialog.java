@@ -28,6 +28,10 @@ public class YesNoDialog {
     static Stage stage;
 
     public static boolean display(String content){
+        return display(content, "Yes", "No");
+    }
+
+    public static boolean display(String content, String firstButton, String seconButton) {
         result = false;
 
 
@@ -40,7 +44,7 @@ public class YesNoDialog {
         txtContent.setFont(new Font(16));
 
         btnYes = new Button();
-        btnYes.setText("Yes");
+        btnYes.setText(firstButton);
         btnYes.setFont(new Font(16));
         btnYes.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -50,7 +54,7 @@ public class YesNoDialog {
         });
 
         btnNo = new Button();
-        btnNo.setText("No");
+        btnNo.setText(seconButton);
         btnNo.setFont(new Font(16));
         btnNo.setOnAction(new EventHandler<ActionEvent>() {
             @Override

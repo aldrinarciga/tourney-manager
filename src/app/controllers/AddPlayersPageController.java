@@ -1,5 +1,6 @@
 package app.controllers;
 
+import app.BulkAddDialog;
 import app.YesNoDialog;
 import app.models.*;
 import javafx.collections.FXCollections;
@@ -13,6 +14,7 @@ import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -80,19 +82,16 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
     }
 
     public void addPlayer(ActionEvent actionEvent) {
-        String firstName = txtFirstName.getText();
-        String lastName = txtLastName.getText();
+        String firstName = txtFirstName.getText().trim();
+        String lastName = txtLastName.getText().trim();
         boolean isRated = chRated.isSelected();
 
-        Player player = new Player(firstName, lastName, isRated);
-        players.add(player);
-
-        if(isRated){
-            tblRatedPlayers.getItems().add(player);
-        }else{
-            tblNonRatedPlayers.getItems().add(player);
+        if(firstName.isEmpty()) {
+            return;
         }
 
+        Player player = new Player(firstName, lastName, isRated);
+        addPlayerAndResetTable(player);
         savePlayers();
 
         //resetTable();
@@ -102,6 +101,16 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
         chRated.setSelected(false);
         txtFirstName.requestFocus();
         txtStatus.setText("");
+    }
+
+    private void addPlayerAndResetTable(Player player) {
+        players.add(player);
+        if(player.isRated()){
+            tblRatedPlayers.getItems().add(player);
+        }else{
+            tblNonRatedPlayers.getItems().add(player);
+        }
+
     }
 
     public void deleteFromRated(Event event) {
@@ -206,5 +215,13 @@ public class AddPlayersPageController implements Initializable, ControllerInterf
             chRated.setSelected(x <= 15);
             addPlayer(null);
         }
+    }
+
+    public void bulkAdd(ActionEvent actionEvent) {
+        List<Player> playersToAdd = BulkAddDialog.display();
+        for(Player player : playersToAdd) {
+            addPlayerAndResetTable(player);
+        }
+        savePlayers();
     }
 }

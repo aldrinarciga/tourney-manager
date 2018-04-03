@@ -340,20 +340,14 @@ public class DrawPageController implements Initializable, ControllerInterface {
     }
 
     public void showCopyPlayers(ActionEvent actionEvent) {
-        StringBuilder builder = new StringBuilder("");
-        for(int i = 0 ; i < currentMatch.getTeams().size(); i++) {
-            Team team = currentMatch.getTeams().get(i);
-            for(int x = 0; x < team.getPlayers().size(); x++) {
-                Player player = team.getPlayers().get(x);
-                builder.append(player.getFirstName() + " " + player.getLastName());
-                if(x != team.getPlayers().size() - 1) {
-                    builder.append(" / ");
-                }
-            }
-            if(i != currentMatch.getTeams().size() - 1) {
-                builder.append("\n");
+        StringBuilder builder = getStringBuilderForTeam();
+        if(currentMatch.getMatchType() != Match.MatchType.SINGLES) {
+            boolean isTeam =  YesNoDialog.display("Copy as team or individual?", "Team", "Individual");
+            if(!isTeam) {
+                builder = getStringBuilderForIndividuals();
             }
         }
+
         Toolkit.getDefaultToolkit()
                 .getSystemClipboard()
                 .setContents(
@@ -384,5 +378,37 @@ public class DrawPageController implements Initializable, ControllerInterface {
         currentMatch.setBoards(boards);
         MatchListMgr.getCurrentMatch().setBoards(boards);
         MatchListMgr.saveCurrentMatch();
+    }
+
+    private StringBuilder getStringBuilderForTeam() {
+        StringBuilder builder = new StringBuilder("");
+        for(int i = 0 ; i < currentMatch.getTeams().size(); i++) {
+            Team team = currentMatch.getTeams().get(i);
+            for(int x = 0; x < team.getPlayers().size(); x++) {
+                Player player = team.getPlayers().get(x);
+                builder.append(player.getFirstName() + " " + player.getLastName());
+                if(x != team.getPlayers().size() - 1) {
+                    builder.append(" / ");
+                }
+            }
+            if(i != currentMatch.getTeams().size() - 1) {
+                builder.append("\n");
+            }
+        }
+        return builder;
+    }
+
+    private StringBuilder getStringBuilderForIndividuals() {
+        StringBuilder builder = new StringBuilder("");
+        for(int x = 0; x < currentMatch.getPlayers().size(); x++) {
+            Player player = currentMatch.getPlayers().get(x);
+            builder.append(player.getFirstName());
+            builder.append(" ");
+            builder.append(player.getLastName());
+            if(x != currentMatch.getPlayers().size() - 1) {
+                builder.append("\n");
+            }
+        }
+        return builder;
     }
 }
