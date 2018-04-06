@@ -4,6 +4,7 @@ import app.*;
 import app.dialogs.*;
 import app.models.*;
 import com.belteshazzar.jquery.JQuery;
+import javafx.application.Platform;
 import javafx.concurrent.Worker;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -139,6 +140,9 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
             try {
                 (new PrintReport()).showReport(boards, playersMap);
             } catch (JRException | ClassNotFoundException | SQLException e) {
+                Platform.runLater(() -> {
+                    ErrorDialog.display("Report file not found");
+                });
                 e.printStackTrace();
             }
         })).start();
@@ -228,17 +232,12 @@ public class ManageTourneyPageController implements Initializable, ControllerInt
         }
 
         if(!results.isEmpty()) {
+            int boardId = results.get(0).getBoardNumber();
             if(results.size() > 1) {
-                StringBuilder builder = new StringBuilder("Multiple results: \n");
-                for(Board board : results) {
-                    builder.append("- B" + board.getBoardNumber() + "/M" + board.getMatchNumber() + ": ");
-                    builder.append(playersMap.get(board.getPlayerOne()) + " vs. " + playersMap.get(board.getPlayerTwo()));
-                    builder.append("\n");
-                }
-
-                SearchResultDialog.display(builder.toString());
-            } else {
-                showBoardDetails(boardsMap.get(results.get(0).getBoardNumber()), (Button) boardContainer.getChildren().get(results.get(0).getBoardNumber() - 1));
+                boardId = SearchResultDialog.display(results, playersMap);
+            }
+            if(boardId > 0) {
+                showBoardDetails(boardsMap.get(boardId), (Button) boardContainer.getChildren().get(boardId - 1));
             }
         } else {
             ErrorDialog.display("No active match found");

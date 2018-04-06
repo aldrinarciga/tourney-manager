@@ -2,6 +2,9 @@
   <artifact type="jar" name="TourneyManager:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/TourneyManager_jar</output-path>
     <root id="archive" name="TourneyManager.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/resources/META-INF/MANIFEST.MF" />
+      </element>
       <element id="module-output" name="TourneyManager" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/controlsfx-8.40.14.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/gson-2.8.2.jar" path-in-jar="/" />

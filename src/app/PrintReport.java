@@ -18,7 +18,7 @@ import java.util.List;
 public class PrintReport extends JFrame {
     public void showReport(List<Board> boards, HashMap<Integer, String> players) throws JRException, ClassNotFoundException, SQLException {
 
-        String reportSrcFile = this.getClass().getResource("reports/MatchReport.jrxml").getPath();
+        String reportSrcFile = System.getProperty("user.dir") + "/MatchReport.jrxml"/*this.getClass().getResource("MatchReport.jrxml").getPath()*/;
 
         // First, compile jrxml file.
         JasperReport jasperReport = JasperCompileManager.compileReport(reportSrcFile);
