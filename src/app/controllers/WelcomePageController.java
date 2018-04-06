@@ -1,8 +1,9 @@
 package app.controllers;
 
 import app.dialogs.MatchMakerDialog;
-import app.YesNoDialog;
+import app.dialogs.YesNoDialog;
 import app.models.*;
+import app.utils.OtherUtils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import javafx.beans.property.ListProperty;
@@ -88,13 +89,18 @@ public class WelcomePageController implements Initializable, ControllerInterface
         Match match = MatchMakerDialog.display(type);
         if(match != null){
             try {
-                MatchListMgr.getMatches().add(match);
+                MatchListMgr.getMatches().add(match.getSimpleMatch());
                 MatchListMgr.saveMatches();
 
                 MatchListMgr.setCurrentMatch(match);
 
                 if(MatchListMgr.saveCurrentMatch()) {
-                    mainInterface.showAddPlayersScene();
+                    if(match.getStatus() == Match.Status.CREATED) {
+                        mainInterface.showAddPlayersScene();
+                    } else if(match.getStatus() == Match.Status.STARTED) {
+                        mainInterface.showDrawScene();
+                    }
+
                 }
 
             } catch (Exception e) {

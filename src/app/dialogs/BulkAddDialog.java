@@ -1,5 +1,6 @@
 package app.dialogs;
 
+import app.utils.OtherUtils;
 import app.models.Player;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -70,29 +71,8 @@ public class BulkAddDialog {
         String bulk = txtBulkAdd.getText();
         String[] toAdd = bulk.split("\n");
         for(String name: toAdd) {
-            name = name.trim();
-            if(!name.isEmpty()) {
-                String firstName = "";
-                String lastName = "";
-                boolean isRated = false;
-                String[] nameSplit = name.split(" ");
-                if(nameSplit.length > 0) {
-                    if(nameSplit.length > 1) {
-                        lastName = nameSplit[nameSplit.length - 1];
-                        for(int x = 0; x < nameSplit.length - 1; x++) {
-                            firstName += nameSplit[x] + " ";
-                        }
-                    } else  {
-                        firstName = nameSplit[0];
-                    }
-
-                    if(firstName.length()  > 0 && firstName.charAt(0) == '*') {
-                        isRated = true;
-                        firstName = firstName.replace("*", "");
-                    }
-                }
-
-                Player player = new Player(firstName, lastName, isRated);
+            Player player = OtherUtils.parseNameToPlayer(name);
+            if(player != null) {
                 players.add(player);
             }
         }

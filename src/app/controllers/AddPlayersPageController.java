@@ -1,7 +1,7 @@
 package app.controllers;
 
 import app.dialogs.BulkAddDialog;
-import app.YesNoDialog;
+import app.dialogs.YesNoDialog;
 import app.models.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

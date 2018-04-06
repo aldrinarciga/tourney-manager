@@ -1,7 +1,7 @@
 package app.controllers;
 
 import app.dialogs.BoardNumberDialog;
-import app.YesNoDialog;
+import app.dialogs.YesNoDialog;
 import app.dialogs.ErrorDialog;
 import app.models.*;
 import javafx.event.ActionEvent;

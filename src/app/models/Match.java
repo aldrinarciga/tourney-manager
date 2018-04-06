@@ -31,6 +31,10 @@ public class Match {
         this.doubleElimination = doubleElimination;
     }
 
+    public Match getSimpleMatch() {
+        return new Match(title, fileName, matchType, status, doubleElimination);
+    }
+
     public String getTitle() {
         return title;
     }

@@ -1,7 +1,8 @@
 package app.dialogs;
 
 import app.models.Match;
-import app.models.OtherUtils;
+import app.models.PlayerAndTeamList;
+import app.utils.OtherUtils;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -78,7 +79,18 @@ public class MatchMakerDialog {
             String title = titleField.getText();
             String fileName = OtherUtils.getJsonFileName(title);
 
+            boolean isChallongeMatch = YesNoDialog.display("Do you have an existing Challonge ID?");
+            PlayerAndTeamList playerAndTeamList = null;
+            if(isChallongeMatch) {
+                playerAndTeamList = ChallongeMatchDialog.display(type == Match.MatchType.OPEN_DOUBLES || type == Match.MatchType.CLASSIFIED_DOUBLES);
+            }
+
             newMatch = new Match(title, fileName, type, Match.Status.CREATED, chIsDoubleElimination.isSelected());
+            if(playerAndTeamList != null) {
+                newMatch.setStatus(Match.Status.STARTED);
+                newMatch.setPlayers(playerAndTeamList.getPlayers());
+                newMatch.setTeams(playerAndTeamList.getTeams());
+            }
             stage.close();
         }
     };
